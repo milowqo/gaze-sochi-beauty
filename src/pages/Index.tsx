@@ -12,11 +12,32 @@ import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 import { Send, Instagram } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const Index = () => {
   const handleBooking = () => {
     window.open("https://t.me/gazebrows", "_blank");
   };
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("scroll-animate");
+        }
+      });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll(".animate-on-scroll");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -34,7 +55,7 @@ const Index = () => {
           </header>
 
           {/* Hero Section */}
-          <section className="space-y-8">
+          <section className="space-y-8 animate-on-scroll">
             <div className="relative aspect-[3/4] overflow-hidden">
               <img
                 src={heroMaster}
@@ -44,7 +65,7 @@ const Index = () => {
             </div>
 
             {/* Thumbnail Gallery */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-4 animate-on-scroll">
               <img
                 src={process1}
                 alt="Процесс окрашивания"
@@ -70,13 +91,13 @@ const Index = () => {
           {/* CTA Button */}
           <Button
             onClick={handleBooking}
-            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-6 text-base tracking-widest"
+            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-6 text-base tracking-widest animate-on-scroll"
           >
             ЗАПИСАТЬСЯ
           </Button>
 
           {/* Training Section */}
-          <section className="space-y-6">
+          <section className="space-y-6 animate-on-scroll">
             <div className="border border-border p-4 inline-block">
               <h2 className="text-xl tracking-wider">ОБУЧЕНИЕ</h2>
             </div>
@@ -95,7 +116,7 @@ const Index = () => {
           </section>
 
           {/* Quote */}
-          <blockquote className="text-muted-foreground italic text-sm leading-relaxed">
+          <blockquote className="text-muted-foreground italic text-sm leading-relaxed animate-on-scroll">
             Мне тяжело воспринимать свою деятельность за работу. Я невыносимо люблю то, что делаю.
           </blockquote>
         </div>
@@ -103,7 +124,7 @@ const Index = () => {
         {/* RIGHT COLUMN - SERVICES */}
         <div className="px-8 md:px-16 py-12 md:py-16 space-y-16 bg-muted/30">
           {/* Services Header */}
-          <div className="space-y-2">
+          <div className="space-y-2 animate-on-scroll">
             <h2 className="text-4xl md:text-5xl" style={{ fontFamily: "'Alex Brush', cursive" }}>
               УСЛУГИ
             </h2>
@@ -111,7 +132,7 @@ const Index = () => {
           </div>
 
           {/* Price List */}
-          <div className="space-y-1 border-t border-b border-border py-8">
+          <div className="space-y-1 border-t border-b border-border py-8 animate-on-scroll">
             <div className="flex justify-between py-4 border-b border-border">
               <div>
                 <span className="text-xs text-muted-foreground mr-2">(01)</span>
@@ -175,7 +196,7 @@ const Index = () => {
           </Button>
 
           {/* Gallery */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 animate-on-scroll">
             <img
               src={gallery1}
               alt="Результат работы"
@@ -209,7 +230,7 @@ const Index = () => {
           </div>
 
           {/* Contacts */}
-          <section className="space-y-6">
+          <section className="space-y-6 animate-on-scroll">
             <h2 className="text-4xl" style={{ fontFamily: "'Alex Brush', cursive" }}>
               КОНТАКТЫ
             </h2>
