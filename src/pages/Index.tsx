@@ -51,93 +51,66 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Fixed Header */}
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/50 transition-all duration-300">
-        <nav className="container mx-auto px-8 py-4 flex justify-between items-center">
+        <nav className="container mx-auto px-4 sm:px-8 py-4">
           <div className="text-xs tracking-widest text-muted-foreground">BROW STUDIO</div>
-          <div className="flex gap-8 text-sm">
-            <button
-              onClick={() => scrollToSection("services")}
-              className="hover:text-primary transition-colors"
-            >
-              Идеальная форма
-            </button>
-            <button
-              onClick={() => scrollToSection("services")}
-              className="hover:text-primary transition-colors"
-            >
-              Плавный изгиб
-            </button>
-            <button
-              onClick={() => scrollToSection("services")}
-              className="hover:text-primary transition-colors"
-            >
-              Правильный цвет
-            </button>
-          </div>
         </nav>
       </header>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-8">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Column - Text */}
-            <div className="space-y-8 animate-on-scroll-left">
-              <div className="space-y-2">
-                <p className="text-xs tracking-widest text-muted-foreground uppercase">
-                  BROW STUDIO
-                </p>
-                <h1 className="text-7xl md:text-8xl font-serif font-bold text-primary">
-                  GAZE
-                </h1>
-              </div>
+      {/* Hero Section - Full Screen */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img
+            src={heroMaster}
+            alt="GAZE Brow Studio"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
 
-              <p className="text-xl text-muted-foreground font-light">
-                Брови, которые говорят за себя.
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 sm:px-8 text-center text-white animate-on-scroll">
+          <div className="space-y-6 sm:space-y-8">
+            <div className="space-y-2 sm:space-y-4">
+              <p className="text-xs sm:text-sm tracking-widest uppercase opacity-90">
+                BROW STUDIO
               </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                <Button
-                  onClick={handleBooking}
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-12 py-6 text-base tracking-wider transition-all duration-300 hover:scale-105 pulse-glow"
-                >
-                  ЗАПИСАТЬСЯ
-                </Button>
-                <Button
-                  onClick={() => scrollToSection("services")}
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-secondary-foreground/30 hover:bg-secondary text-secondary-foreground rounded-full px-12 py-6 text-base tracking-wider transition-all duration-300 hover:scale-105"
-                >
-                  УСЛУГИ
-                </Button>
-              </div>
+              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-bold">
+                GAZE
+              </h1>
             </div>
 
-            {/* Right Column - Hero Image with Decorative Element */}
-            <div className="relative animate-on-scroll-scale">
-              <div className="absolute -top-12 -right-12 w-96 h-96 rounded-full bg-primary opacity-20 blur-3xl"></div>
-              <div className="relative">
-                <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-primary/80 flex items-center justify-center text-background text-8xl font-bold tracking-tighter overflow-hidden">
-                  <span className="opacity-30">BROW</span>
-                </div>
-                <img
-                  src={heroMaster}
-                  alt="GAZE Brow Studio"
-                  className="relative z-10 w-full aspect-square object-cover rounded-3xl shadow-2xl"
-                />
-              </div>
+            <p className="text-lg sm:text-xl md:text-2xl font-light max-w-2xl mx-auto opacity-90">
+              Брови, которые говорят за себя.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-6 sm:pt-8 justify-center">
+              <Button
+                onClick={handleBooking}
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-300 hover:scale-105 pulse-glow"
+              >
+                ЗАПИСАТЬСЯ
+              </Button>
+              <Button
+                onClick={() => scrollToSection("services")}
+                size="lg"
+                variant="outline"
+                className="border-2 border-white/80 hover:bg-white/20 text-white rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-300 hover:scale-105"
+              >
+                УСЛУГИ
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 px-8 bg-card">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-8 bg-card">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {/* Feature 1 */}
-            <div className="bg-background rounded-3xl p-8 space-y-6 animate-on-scroll scroll-animate-delay-1 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-background rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-4 sm:space-y-6 animate-on-scroll scroll-animate-delay-1 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center">
                 <Sparkles className="w-10 h-10 text-primary" />
               </div>
@@ -148,7 +121,7 @@ const Index = () => {
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-background rounded-3xl p-8 space-y-6 animate-on-scroll scroll-animate-delay-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-background rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-4 sm:space-y-6 animate-on-scroll scroll-animate-delay-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center">
                 <HandHeart className="w-10 h-10 text-primary" />
               </div>
@@ -160,7 +133,7 @@ const Index = () => {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-background rounded-3xl p-8 space-y-6 animate-on-scroll scroll-animate-delay-3 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-background rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-4 sm:space-y-6 animate-on-scroll scroll-animate-delay-3 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 sm:col-span-2 md:col-span-1">
               <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center">
                 <MapPin className="w-10 h-10 text-primary" />
               </div>
@@ -174,10 +147,10 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-32 px-8">
+      <section id="services" className="py-16 sm:py-24 md:py-32 px-4 sm:px-8">
         <div className="container mx-auto">
-          <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-6xl font-serif font-bold mb-4">УСЛУГИ</h2>
+          <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4">УСЛУГИ</h2>
             <p className="text-muted-foreground text-sm tracking-widest uppercase">
               price list
             </p>
@@ -185,69 +158,69 @@ const Index = () => {
 
           <div className="max-w-3xl mx-auto space-y-1 animate-on-scroll scroll-animate-delay-1">
             {/* Service Items */}
-            <div className="flex justify-between items-start py-6 border-b border-border hover:bg-card transition-all duration-300 px-4 rounded-lg">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
-                <div className="flex items-baseline gap-3">
+                <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(01)</span>
-                  <span className="text-lg">Коррекция бровей</span>
+                  <span className="text-base sm:text-lg">Коррекция бровей</span>
                 </div>
-                <p className="text-sm text-muted-foreground ml-8 mt-1">
+                <p className="text-xs sm:text-sm text-muted-foreground ml-6 sm:ml-8 mt-1">
                   (без окрашивания)
                 </p>
               </div>
-              <span className="font-semibold text-lg">1200₽</span>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1200₽</span>
             </div>
 
-            <div className="flex justify-between items-start py-6 border-b border-border hover:bg-card transition-all duration-300 px-4 rounded-lg">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
-                <div className="flex items-baseline gap-3">
+                <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(02)</span>
-                  <span className="text-lg">Архитектура бровей</span>
+                  <span className="text-base sm:text-lg">Архитектура бровей</span>
                 </div>
-                <p className="text-sm text-muted-foreground ml-8 mt-1">
+                <p className="text-xs sm:text-sm text-muted-foreground ml-6 sm:ml-8 mt-1">
                   (коррекция + окрашивание)
                 </p>
               </div>
-              <span className="font-semibold text-lg">1500₽</span>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1500₽</span>
             </div>
 
-            <div className="flex justify-between items-start py-6 border-b border-border hover:bg-card transition-all duration-300 px-4 rounded-lg">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
-                <div className="flex items-baseline gap-3">
+                <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(03)</span>
-                  <span className="text-lg">Осветление бровей*</span>
+                  <span className="text-base sm:text-lg">Осветление бровей*</span>
                 </div>
-                <p className="text-sm text-muted-foreground ml-8 mt-1">
+                <p className="text-xs sm:text-sm text-muted-foreground ml-6 sm:ml-8 mt-1">
                   (коррекция + тонирование)
                 </p>
               </div>
-              <span className="font-semibold text-lg">1500₽</span>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1500₽</span>
             </div>
 
-            <div className="flex justify-between items-start py-6 border-b border-border hover:bg-card transition-all duration-300 px-4 rounded-lg">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
-                <div className="flex items-baseline gap-3">
+                <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(04)</span>
-                  <span className="text-lg">Комплекс</span>
+                  <span className="text-base sm:text-lg">Комплекс</span>
                 </div>
-                <p className="text-sm text-muted-foreground ml-8 mt-1">
+                <p className="text-xs sm:text-sm text-muted-foreground ml-6 sm:ml-8 mt-1">
                   (брови + окрашивание ресниц)
                 </p>
               </div>
-              <span className="font-semibold text-lg">1700₽</span>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1700₽</span>
             </div>
 
-            <div className="flex justify-between items-start py-6 border-b border-border hover:bg-card transition-all duration-300 px-4 rounded-lg">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
-                <div className="flex items-baseline gap-3">
+                <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(05)</span>
-                  <span className="text-lg">Комплекс</span>
+                  <span className="text-base sm:text-lg">Комплекс</span>
                 </div>
-                <p className="text-sm text-muted-foreground ml-8 mt-1">
+                <p className="text-xs sm:text-sm text-muted-foreground ml-6 sm:ml-8 mt-1">
                   (брови + дневной макияж)
                 </p>
               </div>
-              <span className="font-semibold text-lg">2500₽</span>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">2500₽</span>
             </div>
           </div>
 
@@ -255,11 +228,11 @@ const Index = () => {
             *при необходимости предварительного осветления
           </p>
 
-          <div className="flex justify-center mt-12 animate-on-scroll scroll-animate-delay-2">
+          <div className="flex justify-center mt-8 sm:mt-12 animate-on-scroll scroll-animate-delay-2">
             <Button
               onClick={handleBooking}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-16 py-6 text-base tracking-wider transition-all duration-300 hover:scale-105 pulse-glow"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-12 sm:px-16 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-300 hover:scale-105 pulse-glow w-full sm:w-auto"
             >
               ЗАПИСАТЬСЯ
             </Button>
@@ -268,32 +241,32 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-32 px-8 bg-card">
+      <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-8 bg-card">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-6xl font-serif font-bold">КОНТАКТЫ</h2>
+          <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold">КОНТАКТЫ</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12 animate-on-scroll scroll-animate-delay-1">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12 animate-on-scroll scroll-animate-delay-1">
             <Button
               variant="outline"
               size="lg"
-              className="justify-start gap-4 py-8 text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300"
+              className="justify-start gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300"
               onClick={() => window.open("https://t.me/gazebrows", "_blank")}
             >
-              <Send className="w-6 h-6" />
+              <Send className="w-5 h-5 sm:w-6 sm:h-6" />
               Telegram
             </Button>
 
             <Button
               variant="outline"
               size="lg"
-              className="justify-start gap-4 py-8 text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300"
+              className="justify-start gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300"
               onClick={() =>
                 window.open("https://instagram.com/gaze.brows", "_blank")
               }
             >
-              <Instagram className="w-6 h-6" />
+              <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
               Instagram *
             </Button>
           </div>
@@ -305,10 +278,10 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 text-center border-t border-border bg-background">
-        <div className="container mx-auto px-8">
-          <div className="mb-8 animate-on-scroll">
-            <p className="text-4xl font-serif font-bold text-primary mb-2">GAZE</p>
+      <footer className="py-8 sm:py-12 text-center border-t border-border bg-background">
+        <div className="container mx-auto px-4 sm:px-8">
+          <div className="mb-6 sm:mb-8 animate-on-scroll">
+            <p className="text-3xl sm:text-4xl font-serif font-bold text-primary mb-2">GAZE</p>
             <p className="text-xs tracking-widest text-muted-foreground">
               BROW STUDIO
             </p>
@@ -322,11 +295,11 @@ const Index = () => {
 
       {/* Floating Help Button */}
       <button
-        className="fixed bottom-8 right-8 w-16 h-16 rounded-full bg-terracotta text-background flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 pulse-glow z-40"
+        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-terracotta text-background flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 pulse-glow z-40"
         onClick={handleBooking}
         aria-label="Помощь"
       >
-        <HelpCircle className="w-8 h-8" />
+        <HelpCircle className="w-7 h-7 sm:w-8 sm:h-8" />
       </button>
     </div>
   );
