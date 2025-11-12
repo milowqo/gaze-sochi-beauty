@@ -3,27 +3,24 @@ import heroNew from "@/assets/hero-new.jpg";
 import { Send, MessageCircle, HandHeart, MapPin, Sparkles, HelpCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import { BookingDialog } from "@/components/BookingDialog";
-
 const Index = () => {
   const [bookingOpen, setBookingOpen] = useState(false);
-
   const handleBooking = () => {
     setBookingOpen(true);
   };
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
+      rootMargin: "0px 0px -50px 0px"
     };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           const element = entry.target;
           if (element.classList.contains("animate-on-scroll")) {
@@ -41,17 +38,11 @@ const Index = () => {
         }
       });
     }, observerOptions);
-
-    const elements = document.querySelectorAll(
-      ".animate-on-scroll, .animate-on-scroll-left, .animate-on-scroll-right, .animate-on-scroll-scale"
-    );
-    elements.forEach((el) => observer.observe(el));
-
+    const elements = document.querySelectorAll(".animate-on-scroll, .animate-on-scroll-left, .animate-on-scroll-right, .animate-on-scroll-scale");
+    elements.forEach(el => observer.observe(el));
     return () => observer.disconnect();
   }, []);
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Fixed Header */}
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/50 transition-all duration-300">
         <nav className="container mx-auto px-4 sm:px-8 py-4">
@@ -63,12 +54,8 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
-          <img
-            src={heroNew}
-            alt="GAZE Brow Studio - Professional Brow Artist"
-            className="w-full h-full object-cover object-center sm:object-[center_20%] md:object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+          <img src={heroNew} alt="GAZE Brow Studio - Professional Brow Artist" className="w-full h-full object-cover object-center sm:object-[center_20%] md:object-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 rounded-none py-0 px-0 my-[18px]"></div>
         </div>
 
         {/* Content */}
@@ -88,18 +75,10 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6 sm:pt-8 justify-center">
-              <Button
-                onClick={handleBooking}
-                size="lg"
-                className="bg-button-book hover:bg-button-book/90 text-nude-dark rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl pulse-glow font-semibold"
-              >
+              <Button onClick={handleBooking} size="lg" className="bg-button-book hover:bg-button-book/90 text-nude-dark rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl pulse-glow font-semibold">
                 ЗАПИСАТЬСЯ
               </Button>
-              <Button
-                onClick={() => scrollToSection("services")}
-                size="lg"
-                className="bg-button-services hover:bg-button-services/90 text-nude-dark border-2 border-button-services rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl font-semibold"
-              >
+              <Button onClick={() => scrollToSection("services")} size="lg" className="bg-button-services hover:bg-button-services/90 text-nude-dark border-2 border-button-services rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl font-semibold">
                 УСЛУГИ
               </Button>
             </div>
@@ -216,11 +195,7 @@ const Index = () => {
           </p>
 
           <div className="flex justify-center mt-8 sm:mt-12 animate-on-scroll scroll-animate-delay-2">
-            <Button
-              onClick={handleBooking}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-12 sm:px-16 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-300 hover:scale-105 pulse-glow w-full sm:w-auto"
-            >
+            <Button onClick={handleBooking} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-12 sm:px-16 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-300 hover:scale-105 pulse-glow w-full sm:w-auto">
               ЗАПИСАТЬСЯ
             </Button>
           </div>
@@ -235,38 +210,19 @@ const Index = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12 animate-on-scroll scroll-animate-delay-1">
-            <Button
-              variant="outline"
-              size="lg"
-              className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl"
-              onClick={() => window.open("https://t.me/milowqo", "_blank")}
-            >
+            <Button variant="outline" size="lg" className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl" onClick={() => window.open("https://t.me/milowqo", "_blank")}>
               <Send className="w-5 h-5 sm:w-6 sm:h-6" />
               Telegram
             </Button>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl"
-              onClick={() =>
-                window.open("https://wa.me/79113802700", "_blank")
-              }
-            >
+            <Button variant="outline" size="lg" className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl" onClick={() => window.open("https://wa.me/79113802700", "_blank")}>
               <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
               WhatsApp
             </Button>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl sm:col-span-2 lg:col-span-1"
-              onClick={() =>
-                window.open("https://vk.com/mari.guseinova", "_blank")
-              }
-            >
+            <Button variant="outline" size="lg" className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl sm:col-span-2 lg:col-span-1" onClick={() => window.open("https://vk.com/mari.guseinova", "_blank")}>
               <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.11 14.77h-1.38c-.55 0-.72-.44-1.72-1.46-.86-.88-1.25-1-1.47-1-.3 0-.39.09-.39.51v1.34c0 .36-.11.58-1.07.58-1.58 0-3.33-.95-4.56-2.73-1.85-2.61-2.35-4.58-2.35-4.99 0-.22.09-.43.51-.43h1.38c.38 0 .52.17.67.58.76 2.2 2.04 4.13 2.56 4.13.2 0 .29-.09.29-.59v-2.3c-.07-.96-.56-1.04-.56-1.38 0-.17.14-.34.37-.34h2.16c.32 0 .44.17.44.54v3.09c0 .32.14.44.23.44.2 0 .37-.12.74-.49 1.14-1.28 1.95-3.26 1.95-3.26.11-.22.28-.43.7-.43h1.38c.46 0 .56.24.46.58-.17.82-1.75 3.5-1.75 3.5-.17.27-.23.39 0 .7.17.23.72.71 1.09 1.14.67.77 1.18 1.41 1.32 1.86.14.44-.08.67-.52.67z"/>
+                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.11 14.77h-1.38c-.55 0-.72-.44-1.72-1.46-.86-.88-1.25-1-1.47-1-.3 0-.39.09-.39.51v1.34c0 .36-.11.58-1.07.58-1.58 0-3.33-.95-4.56-2.73-1.85-2.61-2.35-4.58-2.35-4.99 0-.22.09-.43.51-.43h1.38c.38 0 .52.17.67.58.76 2.2 2.04 4.13 2.56 4.13.2 0 .29-.09.29-.59v-2.3c-.07-.96-.56-1.04-.56-1.38 0-.17.14-.34.37-.34h2.16c.32 0 .44.17.44.54v3.09c0 .32.14.44.23.44.2 0 .37-.12.74-.49 1.14-1.28 1.95-3.26 1.95-3.26.11-.22.28-.43.7-.43h1.38c.46 0 .56.24.46.58-.17.82-1.75 3.5-1.75 3.5-.17.27-.23.39 0 .7.17.23.72.71 1.09 1.14.67.77 1.18 1.41 1.32 1.86.14.44-.08.67-.52.67z" />
               </svg>
               VK
             </Button>
@@ -290,17 +246,11 @@ const Index = () => {
       </footer>
 
       {/* Floating Help Button */}
-      <button
-        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-button-book text-nude-dark flex items-center justify-center shadow-2xl hover:scale-125 transition-all duration-500 pulse-glow z-40 hover:shadow-button-book/50"
-        onClick={handleBooking}
-        aria-label="Помощь"
-      >
+      <button className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-button-book text-nude-dark flex items-center justify-center shadow-2xl hover:scale-125 transition-all duration-500 pulse-glow z-40 hover:shadow-button-book/50" onClick={handleBooking} aria-label="Помощь">
         <HelpCircle className="w-7 h-7 sm:w-8 sm:h-8" />
       </button>
 
       <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
