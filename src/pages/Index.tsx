@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroMaster from "@/assets/hero-master.jpg";
+import heroNew from "@/assets/hero-new.jpg";
 import { Send, MessageCircle, HandHeart, MapPin, Sparkles, HelpCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import { BookingDialog } from "@/components/BookingDialog";
@@ -64,26 +64,26 @@ const Index = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src={heroMaster}
-            alt="GAZE Brow Studio"
-            className="w-full h-full object-cover"
+            src={heroNew}
+            alt="GAZE Brow Studio - Professional Brow Artist"
+            className="w-full h-full object-cover object-center sm:object-[center_20%] md:object-center"
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 sm:px-8 text-center text-white animate-on-scroll">
-          <div className="space-y-6 sm:space-y-8">
+        <div className="relative z-10 container mx-auto px-4 sm:px-8 text-center animate-on-scroll">
+          <div className="space-y-6 sm:space-y-8 backdrop-blur-sm bg-black/10 py-8 sm:py-12 px-4 sm:px-8 rounded-3xl">
             <div className="space-y-2 sm:space-y-4">
-              <p className="text-xs sm:text-sm tracking-widest uppercase opacity-90">
+              <p className="text-xs sm:text-sm tracking-widest uppercase text-hero-text drop-shadow-lg">
                 BROW STUDIO
               </p>
-              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-bold">
+              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-bold text-hero-text drop-shadow-2xl">
                 GAZE
               </h1>
             </div>
 
-            <p className="text-lg sm:text-xl md:text-2xl font-light max-w-2xl mx-auto opacity-90">
+            <p className="text-lg sm:text-xl md:text-2xl font-light max-w-2xl mx-auto text-hero-text drop-shadow-lg">
               Брови, которые говорят за себя.
             </p>
 
@@ -91,14 +91,14 @@ const Index = () => {
               <Button
                 onClick={handleBooking}
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-300 hover:scale-105 pulse-glow"
+                className="bg-button-book hover:bg-button-book/90 text-nude-dark rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl pulse-glow font-semibold"
               >
                 ЗАПИСАТЬСЯ
               </Button>
               <Button
                 onClick={() => scrollToSection("services")}
                 size="lg"
-                className="bg-white/90 hover:bg-white text-foreground border-2 border-white rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-300 hover:scale-105"
+                className="bg-button-services hover:bg-button-services/90 text-nude-dark border-2 border-button-services rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl font-semibold"
               >
                 УСЛУГИ
               </Button>
@@ -112,22 +112,22 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {/* Feature 1 */}
-            <div className="bg-background rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-4 sm:space-y-6 animate-on-scroll scroll-animate-delay-1 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center">
-                <Sparkles className="w-10 h-10 text-primary" />
+            <div className="bg-background rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-4 sm:space-y-6 animate-on-scroll scroll-animate-delay-1 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-105">
+              <div className="w-20 h-20 rounded-full bg-button-book flex items-center justify-center transition-all duration-500 hover:scale-110">
+                <Sparkles className="w-10 h-10 text-nude-dark" />
               </div>
-              <h3 className="text-2xl font-semibold">Долгая носка</h3>
+              <h3 className="text-2xl font-semibold text-nude-dark">Долгая носка</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Равномерный цвет и четкая форма до 4х недель.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-background rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-4 sm:space-y-6 animate-on-scroll scroll-animate-delay-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center">
-                <HandHeart className="w-10 h-10 text-primary" />
+            <div className="bg-background rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-4 sm:space-y-6 animate-on-scroll scroll-animate-delay-2 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-105">
+              <div className="w-20 h-20 rounded-full bg-button-book flex items-center justify-center transition-all duration-500 hover:scale-110">
+                <HandHeart className="w-10 h-10 text-nude-dark" />
               </div>
-              <h3 className="text-2xl font-semibold">Сервис и качество</h3>
+              <h3 className="text-2xl font-semibold text-nude-dark">Сервис и качество</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Чай, конфетки, расслабляющая музыка на фоне и качественно
                 предоставленные услуги.
@@ -135,11 +135,11 @@ const Index = () => {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-background rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-4 sm:space-y-6 animate-on-scroll scroll-animate-delay-3 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 sm:col-span-2 md:col-span-1">
-              <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center">
-                <MapPin className="w-10 h-10 text-primary" />
+            <div className="bg-background rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-4 sm:space-y-6 animate-on-scroll scroll-animate-delay-3 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-105 sm:col-span-2 md:col-span-1">
+              <div className="w-20 h-20 rounded-full bg-button-book flex items-center justify-center transition-all duration-500 hover:scale-110">
+                <MapPin className="w-10 h-10 text-nude-dark" />
               </div>
-              <h3 className="text-2xl font-semibold">Удобное расположение</h3>
+              <h3 className="text-2xl font-semibold text-nude-dark">Удобное расположение</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Студия находится в центре города, рядом парковка.
               </p>
@@ -238,8 +238,8 @@ const Index = () => {
             <Button
               variant="outline"
               size="lg"
-              className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300"
-              onClick={() => window.open("https://t.me/gazebrows", "_blank")}
+              className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl"
+              onClick={() => window.open("https://t.me/milowqo", "_blank")}
             >
               <Send className="w-5 h-5 sm:w-6 sm:h-6" />
               Telegram
@@ -248,9 +248,9 @@ const Index = () => {
             <Button
               variant="outline"
               size="lg"
-              className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300"
+              className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl"
               onClick={() =>
-                window.open("https://wa.me/", "_blank")
+                window.open("https://wa.me/79113802700", "_blank")
               }
             >
               <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -260,9 +260,9 @@ const Index = () => {
             <Button
               variant="outline"
               size="lg"
-              className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1"
+              className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl sm:col-span-2 lg:col-span-1"
               onClick={() =>
-                window.open("https://vk.com/", "_blank")
+                window.open("https://vk.com/mari.guseinova", "_blank")
               }
             >
               <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -291,7 +291,7 @@ const Index = () => {
 
       {/* Floating Help Button */}
       <button
-        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-terracotta text-background flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 pulse-glow z-40"
+        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-button-book text-nude-dark flex items-center justify-center shadow-2xl hover:scale-125 transition-all duration-500 pulse-glow z-40 hover:shadow-button-book/50"
         onClick={handleBooking}
         aria-label="Помощь"
       >

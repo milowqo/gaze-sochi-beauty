@@ -10,49 +10,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 40 30% 95%;
-    --foreground: 25 35% 25%;
+    --background: 42 45% 96%;
+    --foreground: 30 15% 30%;
 
-    --card: 40 35% 98%;
-    --card-foreground: 25 35% 25%;
+    --card: 40 40% 98%;
+    --card-foreground: 30 15% 30%;
 
-    --popover: 40 35% 98%;
-    --popover-foreground: 25 35% 25%;
+    --popover: 40 40% 98%;
+    --popover-foreground: 30 15% 30%;
 
-    --primary: 25 45% 35%;
-    --primary-foreground: 40 30% 95%;
+    --primary: 43 40% 81%;
+    --primary-foreground: 30 15% 30%;
 
-    --secondary: 35 20% 85%;
-    --secondary-foreground: 25 35% 25%;
+    --secondary: 42 100% 91%;
+    --secondary-foreground: 30 15% 30%;
 
-    --muted: 40 20% 90%;
-    --muted-foreground: 25 15% 50%;
+    --muted: 40 30% 92%;
+    --muted-foreground: 30 10% 50%;
 
-    --accent: 15 65% 65%;
-    --accent-foreground: 40 30% 95%;
+    --accent: 48 83% 86%;
+    --accent-foreground: 30 15% 30%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 40 30% 95%;
+    --destructive-foreground: 42 45% 96%;
 
-    --border: 35 20% 80%;
-    --input: 35 20% 80%;
-    --ring: 25 45% 35%;
+    --border: 40 25% 88%;
+    --input: 40 25% 88%;
+    --ring: 43 40% 81%;
 
     --radius: 1rem;
 
-    --sidebar-background: 40 35% 98%;
-    --sidebar-foreground: 25 35% 25%;
-    --sidebar-primary: 25 45% 35%;
-    --sidebar-primary-foreground: 40 35% 98%;
-    --sidebar-accent: 35 20% 85%;
-    --sidebar-accent-foreground: 25 45% 35%;
-    --sidebar-border: 35 20% 80%;
-    --sidebar-ring: 25 45% 35%;
+    --sidebar-background: 40 40% 98%;
+    --sidebar-foreground: 30 15% 30%;
+    --sidebar-primary: 43 40% 81%;
+    --sidebar-primary-foreground: 30 15% 30%;
+    --sidebar-accent: 42 100% 91%;
+    --sidebar-accent-foreground: 30 15% 30%;
+    --sidebar-border: 40 25% 88%;
+    --sidebar-ring: 43 40% 81%;
     
-    --warm-beige: 40 30% 95%;
-    --warm-brown: 25 45% 35%;
-    --soft-taupe: 35 20% 75%;
-    --terracotta: 15 65% 65%;
+    --hero-text: 48 83% 86%;
+    --button-book: 43 40% 81%;
+    --button-services: 42 100% 91%;
+    --nude-light: 42 45% 96%;
+    --nude-dark: 30 15% 30%;
   }
 
   .dark {
@@ -177,11 +178,20 @@ All colors MUST be HSL.
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
-    opacity: 0.8;
+    box-shadow: 0 0 0 0 hsl(var(--button-book) / 0.7);
   }
   50% {
     transform: scale(1.05);
-    opacity: 1;
+    box-shadow: 0 0 20px 10px hsl(var(--button-book) / 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
   }
 }
 
