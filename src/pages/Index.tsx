@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroMaster from "@/assets/hero-master.jpg";
-import { Send, Instagram, HandHeart, MapPin, Sparkles, HelpCircle } from "lucide-react";
+import { Send, MessageCircle, HandHeart, MapPin, Sparkles, HelpCircle, Share2 } from "lucide-react";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -95,8 +95,7 @@ const Index = () => {
               <Button
                 onClick={() => scrollToSection("services")}
                 size="lg"
-                variant="outline"
-                className="border-2 border-white/80 hover:bg-white/20 text-white rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-300 hover:scale-105"
+                className="bg-white/90 hover:bg-white text-foreground border-2 border-white rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-300 hover:scale-105"
               >
                 УСЛУГИ
               </Button>
@@ -247,7 +246,7 @@ const Index = () => {
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold">КОНТАКТЫ</h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12 animate-on-scroll scroll-animate-delay-1">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12 animate-on-scroll scroll-animate-delay-1">
             <Button
               variant="outline"
               size="lg"
@@ -263,17 +262,25 @@ const Index = () => {
               size="lg"
               className="justify-start gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300"
               onClick={() =>
-                window.open("https://instagram.com/gaze.brows", "_blank")
+                window.open("https://wa.me/", "_blank")
               }
             >
-              <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
-              Instagram *
+              <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+              WhatsApp
+            </Button>
+
+            <Button
+              variant="outline"
+              size="lg"
+              className="justify-start gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1"
+              onClick={() =>
+                window.open("https://vk.com/", "_blank")
+              }
+            >
+              <Share2 className="w-5 h-5 sm:w-6 sm:h-6" />
+              VK
             </Button>
           </div>
-
-          <p className="text-xs text-muted-foreground text-center animate-on-scroll scroll-animate-delay-2">
-            *Meta — признана экстремистской организацией в России
-          </p>
         </div>
       </section>
 
@@ -286,8 +293,7 @@ const Index = () => {
               BROW STUDIO
             </p>
           </div>
-          <p className="text-xs text-muted-foreground">@sereda__yana</p>
-          <p className="text-xs text-muted-foreground mt-2">
+          <p className="text-xs text-muted-foreground">
             © BROW STUDIO GAZE {new Date().getFullYear()}
           </p>
         </div>
