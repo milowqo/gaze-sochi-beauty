@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button";
 import heroMaster from "@/assets/hero-master.jpg";
-import { Send, MessageCircle, HandHeart, MapPin, Sparkles, HelpCircle, Share2 } from "lucide-react";
-import { useEffect } from "react";
+import { Send, MessageCircle, HandHeart, MapPin, Sparkles, HelpCircle } from "lucide-react";
+import { useState, useEffect } from "react";
+import { BookingDialog } from "@/components/BookingDialog";
 
 const Index = () => {
+  const [bookingOpen, setBookingOpen] = useState(false);
+
   const handleBooking = () => {
-    window.open("https://t.me/gazebrows", "_blank");
+    setBookingOpen(true);
   };
 
   const scrollToSection = (id: string) => {
@@ -157,67 +160,52 @@ const Index = () => {
 
           <div className="max-w-3xl mx-auto space-y-1 animate-on-scroll scroll-animate-delay-1">
             {/* Service Items */}
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(01)</span>
-                  <span className="text-base sm:text-lg">Коррекция бровей</span>
+                  <span className="text-base sm:text-lg">Коррекция бровей <span className="text-xs sm:text-sm text-muted-foreground">(без окрашивания)</span></span>
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground ml-6 sm:ml-8 mt-1">
-                  (без окрашивания)
-                </p>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1200₽</span>
             </div>
 
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(02)</span>
-                  <span className="text-base sm:text-lg">Архитектура бровей</span>
+                  <span className="text-base sm:text-lg">Архитектура бровей <span className="text-xs sm:text-sm text-muted-foreground">(коррекция + окрашивание)</span></span>
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground ml-6 sm:ml-8 mt-1">
-                  (коррекция + окрашивание)
-                </p>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1500₽</span>
             </div>
 
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(03)</span>
-                  <span className="text-base sm:text-lg">Осветление бровей*</span>
+                  <span className="text-base sm:text-lg">Осветление бровей* <span className="text-xs sm:text-sm text-muted-foreground">(коррекция + тонирование)</span></span>
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground ml-6 sm:ml-8 mt-1">
-                  (коррекция + тонирование)
-                </p>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1500₽</span>
             </div>
 
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(04)</span>
-                  <span className="text-base sm:text-lg">Комплекс</span>
+                  <span className="text-base sm:text-lg">Комплекс <span className="text-xs sm:text-sm text-muted-foreground">(брови + окрашивание ресниц)</span></span>
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground ml-6 sm:ml-8 mt-1">
-                  (брови + окрашивание ресниц)
-                </p>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1700₽</span>
             </div>
 
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(05)</span>
-                  <span className="text-base sm:text-lg">Комплекс</span>
+                  <span className="text-base sm:text-lg">Комплекс <span className="text-xs sm:text-sm text-muted-foreground">(брови + дневной макияж)</span></span>
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground ml-6 sm:ml-8 mt-1">
-                  (брови + дневной макияж)
-                </p>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">2500₽</span>
             </div>
@@ -250,7 +238,7 @@ const Index = () => {
             <Button
               variant="outline"
               size="lg"
-              className="justify-start gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300"
+              className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300"
               onClick={() => window.open("https://t.me/gazebrows", "_blank")}
             >
               <Send className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -260,7 +248,7 @@ const Index = () => {
             <Button
               variant="outline"
               size="lg"
-              className="justify-start gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300"
+              className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300"
               onClick={() =>
                 window.open("https://wa.me/", "_blank")
               }
@@ -272,12 +260,14 @@ const Index = () => {
             <Button
               variant="outline"
               size="lg"
-              className="justify-start gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1"
+              className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1"
               onClick={() =>
                 window.open("https://vk.com/", "_blank")
               }
             >
-              <Share2 className="w-5 h-5 sm:w-6 sm:h-6" />
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.11 14.77h-1.38c-.55 0-.72-.44-1.72-1.46-.86-.88-1.25-1-1.47-1-.3 0-.39.09-.39.51v1.34c0 .36-.11.58-1.07.58-1.58 0-3.33-.95-4.56-2.73-1.85-2.61-2.35-4.58-2.35-4.99 0-.22.09-.43.51-.43h1.38c.38 0 .52.17.67.58.76 2.2 2.04 4.13 2.56 4.13.2 0 .29-.09.29-.59v-2.3c-.07-.96-.56-1.04-.56-1.38 0-.17.14-.34.37-.34h2.16c.32 0 .44.17.44.54v3.09c0 .32.14.44.23.44.2 0 .37-.12.74-.49 1.14-1.28 1.95-3.26 1.95-3.26.11-.22.28-.43.7-.43h1.38c.46 0 .56.24.46.58-.17.82-1.75 3.5-1.75 3.5-.17.27-.23.39 0 .7.17.23.72.71 1.09 1.14.67.77 1.18 1.41 1.32 1.86.14.44-.08.67-.52.67z"/>
+              </svg>
               VK
             </Button>
           </div>
@@ -307,6 +297,8 @@ const Index = () => {
       >
         <HelpCircle className="w-7 h-7 sm:w-8 sm:h-8" />
       </button>
+
+      <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
     </div>
   );
 };
