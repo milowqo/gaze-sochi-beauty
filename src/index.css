@@ -51,7 +51,9 @@ All colors MUST be HSL.
     
     --hero-text: 48 83% 86%;
     --button-book: 43 40% 81%;
-    --button-services: 42 100% 91%;
+    --button-book-hover: 40 35% 72%;
+    --button-services: 30 41% 42%;
+    --cappuccino: 30 41% 42%;
     --nude-light: 42 45% 96%;
     --nude-dark: 30 15% 30%;
   }

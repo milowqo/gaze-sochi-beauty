@@ -54,7 +54,7 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
-          <img src={heroNew} alt="GAZE Brow Studio - Professional Brow Artist" className="w-full h-full object-cover object-center sm:object-[center_20%] md:object-center" />
+          <img src={heroNew} alt="GAZE Brow Studio - Professional Brow Artist" className="w-full h-full object-cover object-[65%_20%] sm:object-[60%_25%] md:object-[center_30%]" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 rounded-none py-0 px-0 my-0"></div>
         </div>
 
@@ -75,10 +75,10 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6 sm:pt-8 justify-center">
-              <Button onClick={handleBooking} size="lg" className="bg-button-book hover:bg-button-book/90 text-nude-dark rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl pulse-glow font-semibold">
+              <Button onClick={handleBooking} size="lg" className="bg-button-book hover:bg-button-book-hover text-nude-dark rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl pulse-glow font-semibold">
                 ЗАПИСАТЬСЯ
               </Button>
-              <Button onClick={() => scrollToSection("services")} size="lg" className="bg-button-services hover:bg-button-services/90 text-nude-dark border-2 border-button-services rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl font-semibold">
+              <Button onClick={() => scrollToSection("services")} size="lg" className="bg-cappuccino hover:bg-cappuccino/80 text-hero-text border-2 border-cappuccino rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl font-semibold">
                 УСЛУГИ
               </Button>
             </div>
