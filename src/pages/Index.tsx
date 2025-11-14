@@ -55,7 +55,7 @@ const Index = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img src={heroNew} alt="GAZE Brow Studio - Professional Brow Artist" className="w-full h-full object-cover object-center sm:object-[center_20%] md:object-center" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 rounded-none py-0 px-0 my-[18px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 rounded-none py-0 px-0 my-0"></div>
         </div>
 
         {/* Content */}
