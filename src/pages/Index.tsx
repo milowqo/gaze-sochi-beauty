@@ -3,6 +3,8 @@ import heroNew from "@/assets/hero-new.jpg";
 import { Send, MessageCircle, HandHeart, MapPin, Sparkles, HelpCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import { BookingDialog } from "@/components/BookingDialog";
+import { Gallery } from "@/components/Gallery";
+import { Testimonials } from "@/components/Testimonials";
 const Index = () => {
   const [bookingOpen, setBookingOpen] = useState(false);
   const handleBooking = () => {
@@ -86,8 +88,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <Gallery />
+
       {/* Features Grid */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-8 bg-card">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-8 bg-background">
         <div className="container mx-auto">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {/* Feature 1 */}
@@ -229,6 +234,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* Footer */}
       <footer className="py-8 sm:py-12 text-center border-t border-border bg-background">
