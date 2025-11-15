@@ -73,10 +73,10 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6 sm:pt-8 justify-center items-center">
-              <a href="https://dikidi.net/#widget=198091" className="inline-flex items-center justify-center rounded-full text-sm sm:text-base font-semibold transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 bg-button-book hover:bg-button-book-hover text-nude-dark px-8 sm:px-12 py-5 sm:py-6 tracking-wider hover:scale-110 hover:shadow-2xl pulse-glow h-12 sm:h-14">
+              <a href="https://dikidi.net/#widget=198091" className="inline-flex items-center justify-center rounded-full text-sm font-semibold transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 bg-button-book hover:bg-button-book-hover text-nude-dark px-6 sm:px-8 py-3 sm:py-4 tracking-wider hover:scale-110 hover:shadow-2xl pulse-glow">
                 ЗАПИСАТЬСЯ
               </a>
-              <Button onClick={() => scrollToSection("services")} size="lg" className="bg-cappuccino hover:bg-cappuccino/80 text-hero-text border-2 border-cappuccino rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl font-semibold h-12 sm:h-14">
+              <Button onClick={() => scrollToSection("services")} size="lg" className="bg-cappuccino hover:bg-cappuccino/80 text-hero-text border-2 border-cappuccino rounded-full px-6 sm:px-8 py-3 sm:py-4 text-sm tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl font-semibold">
                 УСЛУГИ
               </Button>
             </div>
