@@ -1,16 +1,11 @@
 import { Button } from "@/components/ui/button";
 import heroNew from "@/assets/hero-new.jpg";
 import { Send, MessageCircle, HandHeart, MapPin, Sparkles, HelpCircle } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Gallery } from "@/components/Gallery";
 import { Testimonials } from "@/components/Testimonials";
-import { BookingDialog } from "@/components/BookingDialog";
+
 const Index = () => {
-  const [bookingOpen, setBookingOpen] = useState(false);
-  
-  const handleBooking = () => {
-    setBookingOpen(true);
-  };
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({
@@ -78,9 +73,9 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6 sm:pt-8 justify-center">
-              <Button onClick={handleBooking} size="lg" className="bg-button-book hover:bg-button-book-hover text-nude-dark rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl pulse-glow font-semibold">
+              <a href="https://dikidi.net/#widget=198091" className="inline-flex items-center justify-center rounded-full text-sm font-semibold transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 bg-button-book hover:bg-button-book-hover text-nude-dark px-8 sm:px-12 py-5 sm:py-6 tracking-wider hover:scale-110 hover:shadow-2xl pulse-glow">
                 ЗАПИСАТЬСЯ
-              </Button>
+              </a>
               <Button onClick={() => scrollToSection("services")} size="lg" className="bg-cappuccino hover:bg-cappuccino/80 text-hero-text border-2 border-cappuccino rounded-full px-8 sm:px-12 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl font-semibold">
                 УСЛУГИ
               </Button>
@@ -201,9 +196,9 @@ const Index = () => {
           </p>
 
           <div className="flex justify-center mt-8 sm:mt-12 animate-on-scroll scroll-animate-delay-2">
-            <Button onClick={handleBooking} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-12 sm:px-16 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-300 hover:scale-105 pulse-glow w-full sm:w-auto">
+            <a href="https://dikidi.net/#widget=198091" className="inline-flex items-center justify-center rounded-full text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 text-primary-foreground px-12 sm:px-16 py-5 sm:py-6 tracking-wider hover:scale-105 pulse-glow w-full sm:w-auto">
               ЗАПИСАТЬСЯ
-            </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -255,11 +250,9 @@ const Index = () => {
       </footer>
 
       {/* Floating Help Button */}
-      <button className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-button-book text-nude-dark flex items-center justify-center shadow-2xl hover:scale-125 transition-all duration-500 pulse-glow z-40 hover:shadow-button-book/50" onClick={handleBooking} aria-label="Записаться">
+      <a href="https://dikidi.net/#widget=198091" className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-button-book text-nude-dark flex items-center justify-center shadow-2xl hover:scale-125 transition-all duration-500 pulse-glow z-40 hover:shadow-button-book/50" aria-label="Записаться">
         <HelpCircle className="w-7 h-7 sm:w-8 sm:h-8" />
-      </button>
-
-      <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
+      </a>
     </div>;
 };
 export default Index;
