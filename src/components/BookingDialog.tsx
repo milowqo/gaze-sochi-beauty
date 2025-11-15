@@ -18,7 +18,7 @@ export const BookingDialog = ({ open, onOpenChange }: BookingDialogProps) => {
     time: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.phone || !formData.date || !formData.time) {
@@ -26,12 +26,29 @@ export const BookingDialog = ({ open, onOpenChange }: BookingDialogProps) => {
       return;
     }
 
-    // TODO: Интеграция с Dikidi API будет добавлена позже
-    console.log("Booking data:", formData);
-    toast.success("Заявка отправлена! Мы свяжемся с вами в ближайшее время.");
-    
-    setFormData({ name: "", phone: "", date: "", time: "" });
-    onOpenChange(false);
+    try {
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/dikidi-booking`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Запись успешно создана! Ожидайте подтверждения.");
+        setFormData({ name: "", phone: "", date: "", time: "" });
+        onOpenChange(false);
+      } else {
+        toast.error(result.error || "Ошибка при создании записи");
+      }
+    } catch (error) {
+      console.error("Booking error:", error);
+      toast.error("Произошла ошибка. Попробуйте еще раз.");
+    }
   };
 
   return (
