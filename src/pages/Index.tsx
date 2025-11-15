@@ -4,7 +4,6 @@ import { Send, MessageCircle, HandHeart, MapPin, Sparkles, HelpCircle } from "lu
 import { useEffect } from "react";
 import { Gallery } from "@/components/Gallery";
 import { Testimonials } from "@/components/Testimonials";
-
 const Index = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -250,9 +249,7 @@ const Index = () => {
       </footer>
 
       {/* Floating Help Button */}
-      <a href="https://dikidi.net/#widget=198091" className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-button-book text-nude-dark flex items-center justify-center shadow-2xl hover:scale-125 transition-all duration-500 pulse-glow z-40 hover:shadow-button-book/50" aria-label="Записаться">
-        <HelpCircle className="w-7 h-7 sm:w-8 sm:h-8" />
-      </a>
+      
     </div>;
 };
 export default Index;
