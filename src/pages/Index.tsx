@@ -153,7 +153,7 @@ const Index = () => {
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(02)</span>
-                  <span className="text-base sm:text-lg">Коррекция + Окрашивание (краска / хна)<span className="text-xs sm:text-sm text-muted-foreground">(коррекция + окрашивание)</span></span>
+                  <span className="text-base sm:text-lg">Коррекция + Окрашивание <span className="text-xs sm:text-sm text-muted-foreground">(краска / хна)</span></span>
                 </div>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1800₽</span>
@@ -163,7 +163,7 @@ const Index = () => {
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(03)</span>
-                  <span className="text-base sm:text-lg">Коррекция + Окрашивание + Ламинирование<span className="text-xs sm:text-sm text-muted-foreground">(коррекция + тонирование)</span></span>
+                  <span className="text-base sm:text-lg">Коррекция + Окрашивание + Ламинирование</span>
                 </div>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">2300₽</span>
@@ -173,7 +173,7 @@ const Index = () => {
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(04)</span>
-                  <span className="text-base sm:text-lg">Коррекция + Ламинирование<span className="text-xs sm:text-sm text-muted-foreground">(брови + окрашивание ресниц)</span></span>
+                  <span className="text-base sm:text-lg">Коррекция + Ламинирование</span>
                 </div>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1800₽</span>
@@ -183,10 +183,50 @@ const Index = () => {
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(05)</span>
-                  <span className="text-base sm:text-lg">Коррекция + Осветление (небольшое прореживание входит в стоимость)<span className="text-xs sm:text-sm text-muted-foreground">(брови + дневной макияж)</span></span>
+                  <span className="text-base sm:text-lg">Коррекция + Осветление <span className="text-xs sm:text-sm text-muted-foreground">(небольшое прореживание входит в стоимость)</span></span>
                 </div>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1800₽</span>
+            </div>
+
+            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+              <div className="flex-1">
+                <div className="flex items-baseline gap-2 sm:gap-3">
+                  <span className="text-xs text-muted-foreground">(06)</span>
+                  <span className="text-base sm:text-lg">Окрашивание ресниц <span className="text-xs sm:text-sm text-muted-foreground">(краска)</span></span>
+                </div>
+              </div>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">500₽</span>
+            </div>
+
+            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+              <div className="flex-1">
+                <div className="flex items-baseline gap-2 sm:gap-3">
+                  <span className="text-xs text-muted-foreground">(07)</span>
+                  <span className="text-base sm:text-lg">Ламинирование ресниц <span className="text-xs sm:text-sm text-muted-foreground">(botox + окрашивание)</span></span>
+                </div>
+              </div>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">2000₽</span>
+            </div>
+
+            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+              <div className="flex-1">
+                <div className="flex items-baseline gap-2 sm:gap-3">
+                  <span className="text-xs text-muted-foreground">(08)</span>
+                  <span className="text-base sm:text-lg">Комплекс брови + ресницы <span className="text-xs sm:text-sm text-muted-foreground">(ламинирование)</span></span>
+                </div>
+              </div>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">3500₽</span>
+            </div>
+
+            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+              <div className="flex-1">
+                <div className="flex items-baseline gap-2 sm:gap-3">
+                  <span className="text-xs text-muted-foreground">(09)</span>
+                  <span className="text-base sm:text-lg">Удаление нежелательных волос воском <span className="text-xs sm:text-sm text-muted-foreground">(лицо)</span></span>
+                </div>
+              </div>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">от 300₽</span>
             </div>
           </div>
 

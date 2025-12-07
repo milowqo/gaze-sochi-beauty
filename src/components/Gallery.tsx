@@ -1,36 +1,38 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
+import work1 from "@/assets/work-1.jpg";
+import work2 from "@/assets/work-2.jpg";
+import work3 from "@/assets/work-3.jpg";
+import work4 from "@/assets/work-4.jpg";
+import work5 from "@/assets/work-5.jpg";
+import work6 from "@/assets/work-6.jpg";
+
 const galleryImages = [{
   id: 1,
-  src: gallery1,
+  src: work1,
   alt: "Работа 1 - Архитектура бровей"
 }, {
   id: 2,
-  src: gallery2,
+  src: work2,
   alt: "Работа 2 - Коррекция бровей"
 }, {
   id: 3,
-  src: gallery3,
+  src: work3,
   alt: "Работа 3 - Окрашивание бровей"
 }, {
   id: 4,
-  src: gallery4,
+  src: work4,
   alt: "Работа 4 - Комплекс услуг"
 }, {
   id: 5,
-  src: gallery5,
-  alt: "Работа 5 - Осветление бровей"
+  src: work5,
+  alt: "Работа 5 - Оформление бровей"
 }, {
   id: 6,
-  src: gallery6,
-  alt: "Работа 6 - Оформление бровей"
+  src: work6,
+  alt: "Работа 6 - Ламинирование бровей"
 }];
+
 export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   return <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-8 bg-card">
@@ -44,7 +46,7 @@ export const Gallery = () => {
           {galleryImages.map((image, index) => <div key={image.id} className="relative aspect-square overflow-hidden rounded-2xl sm:rounded-3xl cursor-pointer group animate-on-scroll-scale" style={{
           animationDelay: `${index * 100}ms`
         }} onClick={() => setSelectedImage(index)}>
-              <img src={image.src} alt={image.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={image.src} alt={image.alt} className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-all duration-500" />
             </div>)}
         </div>
