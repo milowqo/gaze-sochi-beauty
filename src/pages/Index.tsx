@@ -225,10 +225,6 @@ const Index = () => {
             </div>
           </div>
 
-          <p className="text-xs text-muted-foreground text-center mt-8">
-            *при необходимости предварительного осветления
-          </p>
-
           <div className="flex justify-center mt-8 sm:mt-12 animate-on-scroll scroll-animate-delay-2">
             <a href="https://dikidi.net/#widget=198091" className="inline-flex items-center justify-center rounded-full text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 text-primary-foreground px-12 sm:px-16 py-5 sm:py-6 tracking-wider hover:scale-105 pulse-glow w-full sm:w-auto">
               ЗАПИСАТЬСЯ
