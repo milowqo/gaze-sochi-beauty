@@ -203,7 +203,7 @@ const Index = () => {
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(07)</span>
-                  <span className="text-base sm:text-lg">Ламинирование бровей (уход входит в стоимость)<span className="text-xs sm:text-sm text-muted-foreground">(botox + окрашивание)</span></span>
+                  <span className="text-base sm:text-lg">Ламинирование бровей <span className="text-xs sm:text-sm text-muted-foreground">(уход входит в стоимость)</span></span>
                 </div>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1000₽</span>
@@ -213,7 +213,7 @@ const Index = () => {
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(08)</span>
-                  <span className="text-base sm:text-lg">Осветление бровей (уход входит в стоимость)<span className="text-xs sm:text-sm text-muted-foreground">(ламинирование)</span></span>
+                  <span className="text-base sm:text-lg">Осветление бровей <span className="text-xs sm:text-sm text-muted-foreground">(уход входит в стоимость)</span></span>
                 </div>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1000₽</span>
