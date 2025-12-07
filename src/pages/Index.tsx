@@ -190,7 +190,12 @@ const Index = () => {
             </div>
 
             <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
-              
+              <div className="flex-1">
+                <div className="flex items-baseline gap-2 sm:gap-3">
+                  <span className="text-xs text-muted-foreground">(06)</span>
+                  <span className="text-base sm:text-lg">Окрашивание бровей <span className="text-xs sm:text-sm text-muted-foreground">(краска / хна)</span></span>
+                </div>
+              </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1000₽</span>
             </div>
 
@@ -218,7 +223,7 @@ const Index = () => {
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(09)</span>
-                  <span className="text-base sm:text-lg"><span className="text-xs sm:text-sm text-muted-foreground">(лицо)</span></span>
+                  <span className="text-base sm:text-lg">Депиляция зон на лице</span>
                 </div>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">от 100₽</span>
