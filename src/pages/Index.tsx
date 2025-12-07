@@ -146,47 +146,47 @@ const Index = () => {
                   <span className="text-base sm:text-lg">Коррекция бровей <span className="text-xs sm:text-sm text-muted-foreground">(без окрашивания)</span></span>
                 </div>
               </div>
-              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1200₽</span>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1000₽</span>
             </div>
 
             <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(02)</span>
-                  <span className="text-base sm:text-lg">Архитектура бровей <span className="text-xs sm:text-sm text-muted-foreground">(коррекция + окрашивание)</span></span>
+                  <span className="text-base sm:text-lg">Коррекция + Окрашивание (краска / хна)<span className="text-xs sm:text-sm text-muted-foreground">(коррекция + окрашивание)</span></span>
                 </div>
               </div>
-              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1500₽</span>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1800₽</span>
             </div>
 
             <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(03)</span>
-                  <span className="text-base sm:text-lg">Осветление бровей* <span className="text-xs sm:text-sm text-muted-foreground">(коррекция + тонирование)</span></span>
+                  <span className="text-base sm:text-lg">Коррекция + Окрашивание + Ламинирование<span className="text-xs sm:text-sm text-muted-foreground">(коррекция + тонирование)</span></span>
                 </div>
               </div>
-              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1500₽</span>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">2300₽</span>
             </div>
 
             <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(04)</span>
-                  <span className="text-base sm:text-lg">Комплекс <span className="text-xs sm:text-sm text-muted-foreground">(брови + окрашивание ресниц)</span></span>
+                  <span className="text-base sm:text-lg">Коррекция + Ламинирование<span className="text-xs sm:text-sm text-muted-foreground">(брови + окрашивание ресниц)</span></span>
                 </div>
               </div>
-              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1700₽</span>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1800₽</span>
             </div>
 
             <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(05)</span>
-                  <span className="text-base sm:text-lg">Комплекс <span className="text-xs sm:text-sm text-muted-foreground">(брови + дневной макияж)</span></span>
+                  <span className="text-base sm:text-lg">Коррекция + Осветление (небольшое прореживание входит в стоимость)<span className="text-xs sm:text-sm text-muted-foreground">(брови + дневной макияж)</span></span>
                 </div>
               </div>
-              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">2500₽</span>
+              <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1800₽</span>
             </div>
           </div>
 
