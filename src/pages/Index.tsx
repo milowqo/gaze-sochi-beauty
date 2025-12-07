@@ -218,7 +218,7 @@ const Index = () => {
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(09)</span>
-                  <span className="text-base sm:text-lg">Депиляция зон на лице <span className="text-xs sm:text-sm text-muted-foreground">(лицо)</span></span>
+                  <span className="text-base sm:text-lg"><span className="text-xs sm:text-sm text-muted-foreground">(лицо)</span></span>
                 </div>
               </div>
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">от 100₽</span>
