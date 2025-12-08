@@ -1,24 +1,15 @@
 {
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "predeploy": "npm run build", // Этот скрипт выполнится перед 'deploy'
-    "deploy": "vite build && gh-pages -d dist" // gh-pages автоматически найдет папку dist после build
-  }
-}
-{
-  "name": "vite_react_shadcn_ts",
+  "name": "gaze-sochi-beauty",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:dev": "vite build --mode development",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist" // Запускаем gh-pages напрямую, предполагая, что build уже выполнен predeploy
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -83,6 +74,7 @@
     "eslint": "^9.32.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "gh-pages": "^6.2.0", // <-- Добавлена зависимость
     "globals": "^15.15.0",
     "lovable-tagger": "^1.1.11",
     "postcss": "^8.5.6",
