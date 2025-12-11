@@ -4,12 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* Design system — all colors in HSL */
 @layer base {
   :root {
+    /* ——— Original palette ——— */
     --background: 42 45% 96%;
     --foreground: 30 15% 30%;
 
@@ -56,6 +54,14 @@ All colors MUST be HSL.
     --cappuccino: 30 41% 42%;
     --nude-light: 42 45% 96%;
     --nude-dark: 30 15% 30%;
+
+    /* ——— GAZE pastel palette (lavender-based) ——— */
+    --gaze-background: 330 50% 98%;
+    --gaze-text: 270 25% 35%;
+    --gaze-secondary: 270 15% 48%;
+    --gaze-accent: 270 25% 63%;
+    --gaze-soft: 270 30% 88%;
+    --gaze-dark: 270 20% 22%;
   }
 
   .dark {
@@ -95,10 +101,13 @@ All colors MUST be HSL.
     --sidebar-border: 25 15% 25%;
     --sidebar-ring: 40 30% 85%;
     
-    --warm-beige: 25 25% 12%;
-    --warm-brown: 40 30% 75%;
-    --soft-taupe: 35 15% 40%;
-    --terracotta: 15 55% 55%;
+    /* GAZE dark mode (optional) */
+    --gaze-background: 270 15% 12%;
+    --gaze-text: 270 20% 85%;
+    --gaze-secondary: 270 15% 70%;
+    --gaze-accent: 270 30% 60%;
+    --gaze-soft: 270 10% 20%;
+    --gaze-dark: 270 25% 90%;
   }
 }
 
@@ -112,7 +121,7 @@ All colors MUST be HSL.
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    @apply font-sans;
   }
   
   .font-serif {
@@ -124,59 +133,27 @@ All colors MUST be HSL.
   }
 }
 
+/* Animations */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
-
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
-
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
-
 @keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
-
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
@@ -187,57 +164,19 @@ All colors MUST be HSL.
     box-shadow: 0 0 20px 10px hsl(var(--button-book) / 0);
   }
 }
-
 @keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
 }
 
-.scroll-animate {
-  opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.scroll-animate-left {
-  opacity: 0;
-  animation: fadeInLeft 0.8s ease-out forwards;
-}
-
-.scroll-animate-right {
-  opacity: 0;
-  animation: fadeInRight 0.8s ease-out forwards;
-}
-
-.scroll-animate-scale {
-  opacity: 0;
-  animation: scaleIn 0.6s ease-out forwards;
-}
-
-.scroll-animate-delay-1 {
-  animation-delay: 0.1s;
-}
-
-.scroll-animate-delay-2 {
-  animation-delay: 0.2s;
-}
-
-.scroll-animate-delay-3 {
-  animation-delay: 0.3s;
-}
-
-.scroll-animate-delay-4 {
-  animation-delay: 0.4s;
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
-}
-
-.pulse-glow {
-  animation: pulse 2s ease-in-out infinite;
-}
+/* Animation classes */
+.scroll-animate { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
+.scroll-animate-left { opacity: 0; animation: fadeInLeft 0.8s ease-out forwards; }
+.scroll-animate-right { opacity: 0; animation: fadeInRight 0.8s ease-out forwards; }
+.scroll-animate-scale { opacity: 0; animation: scaleIn 0.6s ease-out forwards; }
+.scroll-animate-delay-1 { animation-delay: 0.1s; }
+.scroll-animate-delay-2 { animation-delay: 0.2s; }
+.scroll-animate-delay-3 { animation-delay: 0.3s; }
+.scroll-animate-delay-4 { animation-delay: 0.4s; }
+.fade-in { opacity: 0; animation: fadeIn 1s ease-out forwards; }
+.pulse-glow { animation: pulse 2s ease-in-out infinite; }
