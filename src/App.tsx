@@ -5,6 +5,24 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+// src/App.tsx (или где рендерится основной макет)
+import Footer from '@/components/Footer';
+
+function App() {
+  return (
+    <div className="min-h-screen flex flex-col bg-gaze-background">
+      {/* Основной контент */}
+      <main className="flex-grow">
+        {/* ... ваш контент ... */}
+      </main>
+
+      {/* Футер */}
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
 
 const queryClient = new QueryClient();
 
