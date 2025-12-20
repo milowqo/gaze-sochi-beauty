@@ -2,21 +2,22 @@
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
-                      http://www.google.com/schemas/sitemap-image/1.1
-                      http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+  xmlns:yandex="http://webmaster.yandex.ru/schemas/sitemap/1.0">
 
   <url>
     <loc>https://gaze-beauty.ru/</loc>
     <lastmod>2025-12-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+
+    <!-- Для Google: изображение -->
     <image:image>
       <image:loc>https://gaze-beauty.ru/preview.jpg</image:loc>
       <image:caption>GAZE — студия бровей в Сочи | Мария Гусейнова</image:caption>
     </image:image>
+
+    <!-- Для Яндекса: тип страницы -->
+    <yandex:related_link>https://gaze-beauty.ru/</yandex:related_link>
   </url>
 
 </urlset>
