@@ -4,7 +4,25 @@ import { Send, MessageCircle, HandHeart, MapPin, Sparkles } from "lucide-react";
 import { useEffect } from "react";
 import { Gallery } from "@/components/Gallery";
 import { Testimonials } from "@/components/Testimonials";
+
+declare global {
+  interface Window {
+    dataLayer?: Array<Record<string, unknown>>;
+    ym?: (counterId: number, method: string, goal: string, params?: Record<string, unknown>) => void;
+  }
+}
+
+const YANDEX_METRIKA_COUNTER_ID = 105798476;
+
 const Index = () => {
+  const trackGoal = (goal: string, params?: Record<string, unknown>) => {
+    window.dataLayer?.push({
+      event: goal,
+      ...params,
+    });
+    window.ym?.(YANDEX_METRIKA_COUNTER_ID, "reachGoal", goal, params);
+  };
+
   const openExternal = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -76,10 +94,13 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6 sm:pt-8 justify-center items-center">
-              <a href="https://dikidi.net/#widget=198091" className="inline-flex items-center justify-center rounded-full text-sm font-semibold transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 bg-button-book hover:bg-button-book-hover text-nude-dark px-6 sm:px-8 py-3 sm:py-4 tracking-wider hover:scale-110 hover:shadow-2xl pulse-glow">
+              <a href="https://dikidi.net/#widget=198091" onClick={() => trackGoal("book_click", { placement: "hero" })} className="inline-flex items-center justify-center rounded-full text-sm font-semibold transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 bg-button-book hover:bg-button-book-hover text-nude-dark px-6 sm:px-8 py-3 sm:py-4 tracking-wider hover:scale-110 hover:shadow-2xl pulse-glow">
                 ЗАПИСАТЬСЯ
               </a>
-              <Button onClick={() => scrollToSection("services")} size="lg" className="bg-cappuccino hover:bg-cappuccino/80 text-hero-text border-2 border-cappuccino rounded-full px-6 sm:px-8 py-3 sm:py-4 text-sm tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl font-semibold">
+              <Button onClick={() => {
+              trackGoal("services_click", { placement: "hero" });
+              scrollToSection("services");
+            }} size="lg" className="bg-cappuccino hover:bg-cappuccino/80 text-hero-text border-2 border-cappuccino rounded-full px-6 sm:px-8 py-3 sm:py-4 text-sm tracking-wider transition-all duration-500 hover:scale-110 hover:shadow-2xl font-semibold">
                 УСЛУГИ
               </Button>
             </div>
@@ -235,7 +256,7 @@ const Index = () => {
           </div>
 
           <div className="flex justify-center mt-8 sm:mt-12 animate-on-scroll scroll-animate-delay-2">
-            <a href="https://dikidi.net/#widget=198091" className="inline-flex items-center justify-center rounded-full text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 text-primary-foreground px-12 sm:px-16 py-5 sm:py-6 tracking-wider hover:scale-105 pulse-glow w-full sm:w-auto">
+            <a href="https://dikidi.net/#widget=198091" onClick={() => trackGoal("book_click", { placement: "services" })} className="inline-flex items-center justify-center rounded-full text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 text-primary-foreground px-12 sm:px-16 py-5 sm:py-6 tracking-wider hover:scale-105 pulse-glow w-full sm:w-auto">
               ЗАПИСАТЬСЯ
             </a>
           </div>
@@ -250,17 +271,26 @@ const Index = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12 animate-on-scroll scroll-animate-delay-1">
-            <Button variant="outline" size="lg" className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl" onClick={() => openExternal("https://t.me/milowqo")} aria-label="Открыть Telegram GAZE">
+            <Button variant="outline" size="lg" className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl" onClick={() => {
+            trackGoal("contact_click", { channel: "telegram" });
+            openExternal("https://t.me/milowqo");
+          }} aria-label="Открыть Telegram GAZE">
               <Send className="w-5 h-5 sm:w-6 sm:h-6" />
               Telegram
             </Button>
 
-            <Button variant="outline" size="lg" className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl" onClick={() => openExternal("https://wa.me/79113802700")} aria-label="Открыть WhatsApp GAZE">
+            <Button variant="outline" size="lg" className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl" onClick={() => {
+            trackGoal("contact_click", { channel: "whatsapp" });
+            openExternal("https://wa.me/79113802700");
+          }} aria-label="Открыть WhatsApp GAZE">
               <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
               WhatsApp
             </Button>
 
-            <Button variant="outline" size="lg" className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl sm:col-span-2 lg:col-span-1" onClick={() => openExternal("https://vk.com/mari.guseinova")} aria-label="Открыть VK GAZE">
+            <Button variant="outline" size="lg" className="justify-center gap-3 sm:gap-4 py-6 sm:py-8 text-base sm:text-lg border-2 rounded-2xl hover:bg-background hover:scale-110 transition-all duration-500 hover:shadow-xl sm:col-span-2 lg:col-span-1" onClick={() => {
+            trackGoal("contact_click", { channel: "vk" });
+            openExternal("https://vk.com/mari.guseinova");
+          }} aria-label="Открыть VK GAZE">
               <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.11 14.77h-1.38c-.55 0-.72-.44-1.72-1.46-.86-.88-1.25-1-1.47-1-.3 0-.39.09-.39.51v1.34c0 .36-.11.58-1.07.58-1.58 0-3.33-.95-4.56-2.73-1.85-2.61-2.35-4.58-2.35-4.99 0-.22.09-.43.51-.43h1.38c.38 0 .52.17.67.58.76 2.2 2.04 4.13 2.56 4.13.2 0 .29-.09.29-.59v-2.3c-.07-.96-.56-1.04-.56-1.38 0-.17.14-.34.37-.34h2.16c.32 0 .44.17.44.54v3.09c0 .32.14.44.23.44.2 0 .37-.12.74-.49 1.14-1.28 1.95-3.26 1.95-3.26.11-.22.28-.43.7-.43h1.38c.46 0 .56.24.46.58-.17.82-1.75 3.5-1.75 3.5-.17.27-.23.39 0 .7.17.23.72.71 1.09 1.14.67.77 1.18 1.41 1.32 1.86.14.44-.08.67-.52.67z" />
               </svg>
