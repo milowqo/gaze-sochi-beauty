@@ -180,3 +180,14 @@
 .scroll-animate-delay-4 { animation-delay: 0.4s; }
 .fade-in { opacity: 0; animation: fadeIn 1s ease-out forwards; }
 .pulse-glow { animation: pulse 2s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
