@@ -46,7 +46,7 @@ export const Gallery = () => {
           {galleryImages.map((image, index) => <div key={image.id} className="relative aspect-square overflow-hidden rounded-2xl sm:rounded-3xl cursor-pointer group animate-on-scroll-scale" style={{
           animationDelay: `${index * 100}ms`
         }} onClick={() => setSelectedImage(index)}>
-              <img src={image.src} alt={image.alt} className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" />
+              <img src={image.src} alt={image.alt} className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-all duration-500" />
             </div>)}
         </div>
@@ -55,7 +55,7 @@ export const Gallery = () => {
       {/* Image Modal */}
       <Dialog open={selectedImage !== null} onOpenChange={() => setSelectedImage(null)}>
         <DialogContent className="max-w-4xl p-0 bg-transparent border-none">
-          {selectedImage !== null && <img src={galleryImages[selectedImage].src} alt={galleryImages[selectedImage].alt} className="w-full h-auto rounded-2xl" />}
+          {selectedImage !== null && <img src={galleryImages[selectedImage].src} alt={galleryImages[selectedImage].alt} className="w-full h-auto rounded-2xl" decoding="async" />}
         </DialogContent>
       </Dialog>
     </section>;

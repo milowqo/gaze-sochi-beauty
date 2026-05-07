@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2026-05-07 18:45">
+  <shop>
+    <name>GAZE</name>
+    <company>GAZE - студия бровей Марии Гусейновой</company>
+    <url>https://gaze-beauty.ru/</url>
+    <currencies>
+      <currency id="RUR" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">Оформление бровей и ресниц</category>
+      <category id="2">Депиляция лица</category>
+    </categories>
+    <sets>
+      <set id="brow-correction">
+        <name>Коррекция бровей в Сочи</name>
+        <url>https://gaze-beauty.ru/#service-brow-correction</url>
+      </set>
+      <set id="brow-correction-color">
+        <name>Коррекция и окрашивание бровей в Сочи</name>
+        <url>https://gaze-beauty.ru/#service-brow-correction-color</url>
+      </set>
+      <set id="brow-complex">
+        <name>Комплекс с ламинированием бровей в Сочи</name>
+        <url>https://gaze-beauty.ru/#service-brow-complex</url>
+      </set>
+      <set id="brow-correction-lamination">
+        <name>Коррекция и ламинирование бровей в Сочи</name>
+        <url>https://gaze-beauty.ru/#service-brow-correction-lamination</url>
+      </set>
+      <set id="brow-correction-lightening">
+        <name>Коррекция и осветление бровей в Сочи</name>
+        <url>https://gaze-beauty.ru/#service-brow-correction-lightening</url>
+      </set>
+      <set id="brow-color">
+        <name>Окрашивание бровей в Сочи</name>
+        <url>https://gaze-beauty.ru/#service-brow-color</url>
+      </set>
+      <set id="brow-lamination">
+        <name>Ламинирование бровей в Сочи</name>
+        <url>https://gaze-beauty.ru/#service-brow-lamination</url>
+      </set>
+      <set id="brow-lightening">
+        <name>Осветление бровей в Сочи</name>
+        <url>https://gaze-beauty.ru/#service-brow-lightening</url>
+      </set>
+      <set id="face-depilation">
+        <name>Депиляция зон на лице в Сочи</name>
+        <url>https://gaze-beauty.ru/#service-face-depilation</url>
+      </set>
+    </sets>
+    <offers>
+      <offer id="service-brow-correction">
+        <name>GAZE - коррекция бровей</name>
+        <url>https://gaze-beauty.ru/#service-brow-correction</url>
+        <price>1000</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>1</categoryId>
+        <set-ids>brow-correction</set-ids>
+        <picture>https://gaze-beauty.ru/preview.jpg</picture>
+        <description>Коррекция формы бровей без окрашивания в студии GAZE в Сочи. Адрес: ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж.</description>
+        <param name="Регион">Сочи</param>
+        <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
+        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="Телефон">+7 911 380-27-00</param>
+      </offer>
+      <offer id="service-brow-correction-color">
+        <name>GAZE - коррекция и окрашивание бровей</name>
+        <url>https://gaze-beauty.ru/#service-brow-correction-color</url>
+        <price>1800</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>1</categoryId>
+        <set-ids>brow-correction-color</set-ids>
+        <picture>https://gaze-beauty.ru/preview.jpg</picture>
+        <description>Коррекция формы и окрашивание бровей краской или хной в студии GAZE в Сочи.</description>
+        <param name="Регион">Сочи</param>
+        <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
+        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="Телефон">+7 911 380-27-00</param>
+      </offer>
+      <offer id="service-brow-complex">
+        <name>GAZE - коррекция, окрашивание и ламинирование бровей</name>
+        <url>https://gaze-beauty.ru/#service-brow-complex</url>
+        <price>2300</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>1</categoryId>
+        <set-ids>brow-complex</set-ids>
+        <picture>https://gaze-beauty.ru/preview.jpg</picture>
+        <description>Комплексная услуга: коррекция, окрашивание и ламинирование бровей в студии GAZE в Сочи.</description>
+        <param name="Регион">Сочи</param>
+        <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
+        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="Телефон">+7 911 380-27-00</param>
+      </offer>
+      <offer id="service-brow-correction-lamination">
+        <name>GAZE - коррекция и ламинирование бровей</name>
+        <url>https://gaze-beauty.ru/#service-brow-correction-lamination</url>
+        <price>1800</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>1</categoryId>
+        <set-ids>brow-correction-lamination</set-ids>
+        <picture>https://gaze-beauty.ru/preview.jpg</picture>
+        <description>Коррекция формы и ламинирование бровей с уходом в студии GAZE в Сочи.</description>
+        <param name="Регион">Сочи</param>
+        <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
+        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="Телефон">+7 911 380-27-00</param>
+      </offer>
+      <offer id="service-brow-correction-lightening">
+        <name>GAZE - коррекция и осветление бровей</name>
+        <url>https://gaze-beauty.ru/#service-brow-correction-lightening</url>
+        <price>1800</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>1</categoryId>
+        <set-ids>brow-correction-lightening</set-ids>
+        <picture>https://gaze-beauty.ru/preview.jpg</picture>
+        <description>Коррекция и осветление бровей, небольшое прореживание входит в стоимость.</description>
+        <param name="Регион">Сочи</param>
+        <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
+        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="Телефон">+7 911 380-27-00</param>
+      </offer>
+      <offer id="service-brow-color">
+        <name>GAZE - окрашивание бровей</name>
+        <url>https://gaze-beauty.ru/#service-brow-color</url>
+        <price>1000</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>1</categoryId>
+        <set-ids>brow-color</set-ids>
+        <picture>https://gaze-beauty.ru/preview.jpg</picture>
+        <description>Окрашивание бровей краской или хной в студии GAZE в Сочи.</description>
+        <param name="Регион">Сочи</param>
+        <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
+        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="Телефон">+7 911 380-27-00</param>
+      </offer>
+      <offer id="service-brow-lamination">
+        <name>GAZE - ламинирование бровей</name>
+        <url>https://gaze-beauty.ru/#service-brow-lamination</url>
+        <price>1000</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>1</categoryId>
+        <set-ids>brow-lamination</set-ids>
+        <picture>https://gaze-beauty.ru/preview.jpg</picture>
+        <description>Ламинирование бровей с уходом в студии GAZE в Сочи.</description>
+        <param name="Регион">Сочи</param>
+        <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
+        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="Телефон">+7 911 380-27-00</param>
+      </offer>
+      <offer id="service-brow-lightening">
+        <name>GAZE - осветление бровей</name>
+        <url>https://gaze-beauty.ru/#service-brow-lightening</url>
+        <price>1000</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>1</categoryId>
+        <set-ids>brow-lightening</set-ids>
+        <picture>https://gaze-beauty.ru/preview.jpg</picture>
+        <description>Осветление бровей с уходом в студии GAZE в Сочи.</description>
+        <param name="Регион">Сочи</param>
+        <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
+        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="Телефон">+7 911 380-27-00</param>
+      </offer>
+      <offer id="service-face-depilation">
+        <name>GAZE - депиляция зон на лице</name>
+        <url>https://gaze-beauty.ru/#service-face-depilation</url>
+        <price>100</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>2</categoryId>
+        <set-ids>face-depilation</set-ids>
+        <picture>https://gaze-beauty.ru/preview.jpg</picture>
+        <description>Депиляция зон на лице в студии GAZE в Сочи. Итоговая стоимость зависит от зоны.</description>
+        <param name="Регион">Сочи</param>
+        <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
+        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="Телефон">+7 911 380-27-00</param>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>
