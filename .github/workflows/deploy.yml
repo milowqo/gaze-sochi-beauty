@@ -1,17 +1,18 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Триггер на push в основной бранч (обычно main или master)
   push:
-    branches: [ "main" ]
-  # Также можно запускать вручную
+    branches: ["main"]
   workflow_dispatch:
 
-# Разрешения для записи в GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  VITE_GOOGLE_ANALYTICS_ID: ${{ vars.VITE_GOOGLE_ANALYTICS_ID || 'G-XXXXXXXXXX' }}
 
 concurrency:
   group: "pages"
@@ -30,18 +31,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Используйте версию Node.js, рекомендованную вашим проектом
-          cache: 'npm'
+          node-version: "24"
+          cache: "npm"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
-        # Убедитесь, что ваша сборка Vite настроена на корректный 'base' путь
-        # для GitHub Pages. Если сайт будет по адресу https://milowqo.github.io/gaze-sochi-beauty/,
-        # возможно, потребуется добавить "base": "/gaze-sochi-beauty/" в vite.config.js
-        # или установить переменную окружения NODE_ENV.
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -49,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist' # Убедитесь, что путь к папке сборки (обычно 'dist' для Vite) правильный
+          path: "dist"
 
       - name: Deploy to GitHub Pages
         id: deployment
