@@ -18,3 +18,4 @@ Allow: /
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&gclid&fbclid /
 
 Sitemap: https://gaze-beauty.ru/sitemap.xml
+# Yandex services feed: https://gaze-beauty.ru/yandex-services.yml

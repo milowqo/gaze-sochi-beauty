@@ -164,7 +164,7 @@ const Index = () => {
 
           <div className="max-w-3xl mx-auto space-y-1 animate-on-scroll scroll-animate-delay-1">
             {/* Service Items */}
-            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div id="service-brow-correction" className="scroll-mt-24 flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(01)</span>
@@ -174,7 +174,7 @@ const Index = () => {
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1000₽</span>
             </div>
 
-            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div id="service-brow-correction-color" className="scroll-mt-24 flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(02)</span>
@@ -184,7 +184,7 @@ const Index = () => {
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1800₽</span>
             </div>
 
-            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div id="service-brow-complex" className="scroll-mt-24 flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(03)</span>
@@ -194,7 +194,7 @@ const Index = () => {
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">2300₽</span>
             </div>
 
-            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div id="service-brow-correction-lamination" className="scroll-mt-24 flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(04)</span>
@@ -204,7 +204,7 @@ const Index = () => {
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1800₽</span>
             </div>
 
-            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div id="service-brow-correction-lightening" className="scroll-mt-24 flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(05)</span>
@@ -214,7 +214,7 @@ const Index = () => {
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1800₽</span>
             </div>
 
-            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div id="service-brow-color" className="scroll-mt-24 flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(06)</span>
@@ -224,7 +224,7 @@ const Index = () => {
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1000₽</span>
             </div>
 
-            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div id="service-brow-lamination" className="scroll-mt-24 flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(07)</span>
@@ -234,7 +234,7 @@ const Index = () => {
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1000₽</span>
             </div>
 
-            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div id="service-brow-lightening" className="scroll-mt-24 flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(08)</span>
@@ -244,7 +244,7 @@ const Index = () => {
               <span className="font-semibold text-base sm:text-lg whitespace-nowrap">1000₽</span>
             </div>
 
-            <div className="flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
+            <div id="service-face-depilation" className="scroll-mt-24 flex justify-between items-center gap-2 py-4 sm:py-6 border-b border-border hover:bg-card transition-all duration-300 px-3 sm:px-4 rounded-lg">
               <div className="flex-1">
                 <div className="flex items-baseline gap-2 sm:gap-3">
                   <span className="text-xs text-muted-foreground">(09)</span>
