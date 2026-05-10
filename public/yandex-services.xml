@@ -61,7 +61,7 @@
         <description>Коррекция формы бровей без окрашивания в студии GAZE в Сочи. Адрес: ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
-        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="График">Ежедневно 10:00-20:00</param>
         <param name="Телефон">+7 911 380-27-00</param>
       </offer>
       <offer id="service-brow-correction-color">
@@ -75,7 +75,7 @@
         <description>Коррекция формы и окрашивание бровей краской или хной в студии GAZE в Сочи.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
-        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="График">Ежедневно 10:00-20:00</param>
         <param name="Телефон">+7 911 380-27-00</param>
       </offer>
       <offer id="service-brow-complex">
@@ -89,7 +89,7 @@
         <description>Комплексная услуга: коррекция, окрашивание и ламинирование бровей в студии GAZE в Сочи.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
-        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="График">Ежедневно 10:00-20:00</param>
         <param name="Телефон">+7 911 380-27-00</param>
       </offer>
       <offer id="service-brow-correction-lamination">
@@ -103,7 +103,7 @@
         <description>Коррекция формы и ламинирование бровей с уходом в студии GAZE в Сочи.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
-        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="График">Ежедневно 10:00-20:00</param>
         <param name="Телефон">+7 911 380-27-00</param>
       </offer>
       <offer id="service-brow-correction-lightening">
@@ -117,7 +117,7 @@
         <description>Коррекция и осветление бровей, небольшое прореживание входит в стоимость.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
-        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="График">Ежедневно 10:00-20:00</param>
         <param name="Телефон">+7 911 380-27-00</param>
       </offer>
       <offer id="service-brow-color">
@@ -131,7 +131,7 @@
         <description>Окрашивание бровей краской или хной в студии GAZE в Сочи.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
-        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="График">Ежедневно 10:00-20:00</param>
         <param name="Телефон">+7 911 380-27-00</param>
       </offer>
       <offer id="service-brow-lamination">
@@ -145,7 +145,7 @@
         <description>Ламинирование бровей с уходом в студии GAZE в Сочи.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
-        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="График">Ежедневно 10:00-20:00</param>
         <param name="Телефон">+7 911 380-27-00</param>
       </offer>
       <offer id="service-brow-lightening">
@@ -159,7 +159,7 @@
         <description>Осветление бровей с уходом в студии GAZE в Сочи.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
-        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="График">Ежедневно 10:00-20:00</param>
         <param name="Телефон">+7 911 380-27-00</param>
       </offer>
       <offer id="service-face-depilation">
@@ -173,7 +173,7 @@
         <description>Депиляция зон на лице в студии GAZE в Сочи. Итоговая стоимость зависит от зоны.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
-        <param name="График">Ежедневно 10:00-21:00</param>
+        <param name="График">Ежедневно 10:00-20:00</param>
         <param name="Телефон">+7 911 380-27-00</param>
       </offer>
     </offers>

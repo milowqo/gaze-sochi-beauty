@@ -19,7 +19,7 @@
 - City: Sochi, Russia
 - Address: ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж
 - Phone: +7 911 380-27-00
-- Opening hours: daily 10:00-21:00
+- Opening hours: daily 10:00-20:00
 
 ## Social And Entity Profiles
 - Yandex Maps: https://yandex.ru/maps/-/CPcIj6zv
