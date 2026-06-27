@@ -62,7 +62,7 @@ export const Testimonials = () => {
   };
 
   return (
-    <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-8 bg-background">
+    <section id="testimonials" className="py-16 sm:py-24 md:py-32 px-4 sm:px-8 bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4">ОТЗЫВЫ</h2>
