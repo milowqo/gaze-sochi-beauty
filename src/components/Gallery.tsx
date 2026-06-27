@@ -35,7 +35,11 @@ const galleryImages = [{
 
 export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  return <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-8 bg-card">
+  const [loaded, setLoaded] = useState<Set<number>>(new Set());
+
+  const handleLoad = (id: number) => setLoaded((prev) => new Set(prev).add(id));
+
+  return <section id="gallery" className="py-16 sm:py-24 md:py-32 px-4 sm:px-8 bg-card">
       <div className="container mx-auto">
         <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4">РАБОТЫ</h2>
@@ -43,12 +47,25 @@ export const Gallery = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 animate-on-scroll scroll-animate-delay-1">
-          {galleryImages.map((image, index) => <div key={image.id} className="relative aspect-square overflow-hidden rounded-2xl sm:rounded-3xl cursor-pointer group animate-on-scroll-scale" style={{
-          animationDelay: `${index * 100}ms`
-        }} onClick={() => setSelectedImage(index)}>
-              <img src={image.src} alt={image.alt} className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" />
+          {galleryImages.map((image, index) => (
+            <div key={image.id} className="relative aspect-square overflow-hidden rounded-2xl sm:rounded-3xl cursor-pointer group animate-on-scroll-scale" style={{
+              animationDelay: `${index * 100}ms`
+            }} onClick={() => setSelectedImage(index)}>
+              {/* Skeleton placeholder */}
+              {!loaded.has(image.id) && (
+                <div className="absolute inset-0 bg-muted animate-pulse rounded-2xl sm:rounded-3xl" />
+              )}
+              <img
+                src={image.src}
+                alt={image.alt}
+                className={`w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-110 ${loaded.has(image.id) ? "opacity-100" : "opacity-0"}`}
+                loading="lazy"
+                decoding="async"
+                onLoad={() => handleLoad(image.id)}
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-all duration-500" />
-            </div>)}
+            </div>
+          ))}
         </div>
       </div>
 
