@@ -12,7 +12,7 @@ export function HeroSection({ onBook, onScrollTo }: HeroSectionProps) {
       <div className="absolute inset-0">
         <img
           src={heroNew}
-          alt="GAZE Brow Studio"
+          alt="Студия бровей GAZE в Сочи — коррекция, окрашивание и ламинирование бровей"
           className="w-full h-full object-cover object-[65%_20%] sm:object-[60%_25%] md:object-[center_30%]"
           loading="eager"
           decoding="async"
