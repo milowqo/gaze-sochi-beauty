@@ -50,7 +50,7 @@ export function MapSection() {
           {/* Yandex Map */}
           <div className="md:col-span-3 rounded-2xl overflow-hidden shadow-lg" style={{ height: "400px" }}>
             <iframe
-              src="https://yandex.ru/map-widget/v1/?ll=39.7297%2C43.5772&z=17&l=map&pt=39.7297%2C43.5772%2Cpm2rdm"
+              src="https://yandex.ru/map-widget/v1/?ll=39.728946%2C43.577578&z=17&l=map&oid=102215447311"
               width="100%"
               height="100%"
               title="GAZE студия бровей на карте Сочи"
