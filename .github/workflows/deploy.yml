@@ -12,7 +12,6 @@ permissions:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  VITE_GOOGLE_ANALYTICS_ID: ${{ vars.VITE_GOOGLE_ANALYTICS_ID || 'G-XXXXXXXXXX' }}
 
 concurrency:
   group: "pages"
@@ -39,6 +38,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_GA_ID: ${{ secrets.VITE_GA_ID }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
