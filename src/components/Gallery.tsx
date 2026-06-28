@@ -62,7 +62,7 @@ export const Gallery = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4">РАБОТЫ</h2>
-          <p className="text-muted-foreground text-sm tracking-widest uppercase">ПРИМЕРЫ РАБОТ</p>
+          <p className="text-muted-foreground text-sm tracking-widest uppercase">Примеры работ — коррекция, окрашивание и ламинирование бровей</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 animate-on-scroll scroll-animate-delay-1">

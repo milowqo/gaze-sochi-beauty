@@ -33,7 +33,8 @@ export function HeroSection({ onBook, onScrollTo }: HeroSectionProps) {
               BROW STUDIO
             </p>
             <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-bold text-hero-text drop-shadow-2xl">
-              GAZE
+              <span className="sr-only">Студия бровей GAZE в Сочи — оформление, коррекция, окрашивание и ламинирование бровей</span>
+              <span aria-hidden="true">GAZE</span>
             </h1>
           </div>
 

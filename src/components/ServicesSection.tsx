@@ -20,7 +20,7 @@ export function ServicesSection({ onBook }: ServicesSectionProps) {
       <div className="container mx-auto">
         <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4">УСЛУГИ</h2>
-          <p className="text-muted-foreground text-sm tracking-widest uppercase">price list</p>
+          <p className="text-muted-foreground text-sm tracking-widest uppercase">Прайс-лист — услуги brow-студии в центре Сочи</p>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-1 animate-on-scroll scroll-animate-delay-1">
