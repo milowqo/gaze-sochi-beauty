@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 
 export function MapSection() {
   return (
@@ -6,7 +6,7 @@ export function MapSection() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4">ЛОКАЦИЯ</h2>
-          <p className="text-muted-foreground text-sm tracking-widest uppercase">как нас найти</p>
+          <p className="text-muted-foreground text-sm tracking-widest uppercase">Студия бровей в центре Сочи — как нас найти</p>
         </div>
 
         <div className="grid md:grid-cols-5 gap-8 lg:gap-12 animate-on-scroll scroll-animate-delay-1">
@@ -58,7 +58,7 @@ export function MapSection() {
               allowFullScreen
             />
           </div>
-          <div className="md:col-span-5 flex justify-center mt-6">
+          <div className="md:col-span-5 flex flex-wrap justify-center gap-4 mt-6">
             <a
               href="https://yandex.ru/maps/org/geyz/102215447311/"
               target="_blank"
@@ -67,6 +67,15 @@ export function MapSection() {
             >
               <MapPin className="w-4 h-4" />
               Открыть карточку GAZE в Яндекс.Картах
+            </a>
+            <a
+              href="https://yandex.ru/maps/?rtext=~43.577578%2C39.728946&rtt=auto"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
+            >
+              <Navigation className="w-4 h-4" />
+              Построить маршрут
             </a>
           </div>
         </div>

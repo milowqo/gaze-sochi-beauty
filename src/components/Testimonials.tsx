@@ -67,7 +67,7 @@ export const Testimonials = () => {
         <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4">ОТЗЫВЫ</h2>
           <p className="text-muted-foreground text-sm tracking-widest uppercase">
-            что говорят наши клиенты
+            что говорят клиенты — отзывы о студии бровей GAZE в Сочи
           </p>
         </div>
 

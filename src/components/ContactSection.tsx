@@ -11,7 +11,7 @@ export function ContactSection({ onContact }: ContactSectionProps) {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4">КОНТАКТЫ</h2>
-          <p className="text-muted-foreground text-sm tracking-widest uppercase">свяжитесь с нами</p>
+          <p className="text-muted-foreground text-sm tracking-widest uppercase">Свяжитесь с нами — запись онлайн в студию GAZE</p>
         </div>
 
         {/* Info row */}
