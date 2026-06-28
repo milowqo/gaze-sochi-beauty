@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Phone, Clock, Navigation, Eye } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
 
 export function MapSection() {
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -80,15 +80,6 @@ export function MapSection() {
             >
               <MapPin className="w-4 h-4" />
               Открыть карточку GAZE в Яндекс.Картах
-            </a>
-            <a
-              href="https://yandex.ru/maps/?rtext=~43.577578%2C39.728946&rtt=auto"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
-            >
-              <Navigation className="w-4 h-4" />
-              Построить маршрут
             </a>
           </div>
         </div>
