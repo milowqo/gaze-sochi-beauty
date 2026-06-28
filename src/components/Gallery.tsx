@@ -2,52 +2,80 @@ import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import work1jpg from "@/assets/work-1.jpg";
 import work1webp from "@/assets/work-1.webp";
+import work1w400 from "@/assets/work-1-400.webp";
+import work1w800 from "@/assets/work-1-800.webp";
 import work2jpg from "@/assets/work-2.jpg";
 import work2webp from "@/assets/work-2.webp";
+import work2w400 from "@/assets/work-2-400.webp";
+import work2w800 from "@/assets/work-2-800.webp";
 import work3jpg from "@/assets/work-3.jpg";
 import work3webp from "@/assets/work-3.webp";
+import work3w400 from "@/assets/work-3-400.webp";
+import work3w800 from "@/assets/work-3-800.webp";
 import work4jpg from "@/assets/work-4.jpg";
 import work4webp from "@/assets/work-4.webp";
+import work4w400 from "@/assets/work-4-400.webp";
+import work4w800 from "@/assets/work-4-800.webp";
 import work5jpg from "@/assets/work-5.jpg";
 import work5webp from "@/assets/work-5.webp";
+import work5w400 from "@/assets/work-5-400.webp";
+import work5w800 from "@/assets/work-5-800.webp";
 import work6jpg from "@/assets/work-6.jpg";
 import work6webp from "@/assets/work-6.webp";
+import work6w400 from "@/assets/work-6-400.webp";
+import work6w800 from "@/assets/work-6-800.webp";
 
 interface GalleryImage {
   id: number;
   webp: string;
+  webp400: string;
+  webp800: string;
   jpg: string;
   alt: string;
 }
 
+const SIZES = "(max-width: 768px) 50vw, 33vw";
+
 const galleryImages: GalleryImage[] = [{
   id: 1,
   webp: work1webp,
+  webp400: work1w400,
+  webp800: work1w800,
   jpg: work1jpg,
   alt: "Коррекция бровей в Сочи — архитектура и форма от GAZE"
 }, {
   id: 2,
   webp: work2webp,
+  webp400: work2w400,
+  webp800: work2w800,
   jpg: work2jpg,
   alt: "Результат коррекции бровей до и после — студия GAZE Сочи"
 }, {
   id: 3,
   webp: work3webp,
+  webp400: work3w400,
+  webp800: work3w800,
   jpg: work3jpg,
   alt: "Окрашивание бровей краской в студии GAZE Сочи"
 }, {
   id: 4,
   webp: work4webp,
+  webp400: work4w400,
+  webp800: work4w800,
   jpg: work4jpg,
   alt: "Комплекс услуг: коррекция и ламинирование бровей GAZE"
 }, {
   id: 5,
   webp: work5webp,
+  webp400: work5w400,
+  webp800: work5w800,
   jpg: work5jpg,
   alt: "Оформление бровей — работа мастера GAZE в Сочи"
 }, {
   id: 6,
   webp: work6webp,
+  webp400: work6w400,
+  webp800: work6w800,
   jpg: work6jpg,
   alt: "Ламинирование бровей с уходом — результат GAZE Сочи"
 }];
@@ -75,9 +103,15 @@ export const Gallery = () => {
                 <div className="absolute inset-0 bg-muted animate-pulse rounded-2xl sm:rounded-3xl" />
               )}
               <picture>
-                <source srcSet={image.webp} type="image/webp" />
+                <source
+                  srcSet={`${image.webp400} 400w, ${image.webp800} 800w, ${image.webp} 1600w`}
+                  sizes={SIZES}
+                  type="image/webp"
+                />
                 <img
                   src={image.jpg}
+                  srcSet={`${image.webp400} 400w, ${image.webp800} 800w`}
+                  sizes={SIZES}
                   alt={image.alt}
                   width="400"
                   height="400"
