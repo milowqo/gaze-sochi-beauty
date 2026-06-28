@@ -1,4 +1,5 @@
-import heroNew from "@/assets/hero-new.jpg";
+import heroNewJpg from "@/assets/hero-new.jpg";
+import heroNewWebp from "@/assets/hero-new.webp";
 import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
@@ -10,13 +11,18 @@ export function HeroSection({ onBook, onScrollTo }: HeroSectionProps) {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img
-          src={heroNew}
-          alt="Студия бровей GAZE в Сочи — коррекция, окрашивание и ламинирование бровей"
-          className="w-full h-full object-cover object-[65%_20%] sm:object-[60%_25%] md:object-[center_30%]"
-          loading="eager"
-          decoding="async"
-        />
+        <picture>
+          <source srcSet={heroNewWebp} type="image/webp" />
+          <img
+            src={heroNewJpg}
+            alt="Студия бровей GAZE в Сочи — коррекция, окрашивание и ламинирование бровей"
+            width="1920"
+            height="1280"
+            className="w-full h-full object-cover object-[65%_20%] sm:object-[60%_25%] md:object-[center_30%]"
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
       </div>
 
