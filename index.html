@@ -34,13 +34,18 @@
       gtag('config', 'G-GVFP951LBE');
     </script>
 
-    <!-- Google Fonts preconnect + stylesheet (instead of CSS @import) -->
+    <!-- Google Fonts preconnect + non-render-blocking stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" />
+    </noscript>
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://gaze-beauty.ru/" />

@@ -1,0 +1,8 @@
+# GitHub Pages custom headers — deployed to dist/ via Vite public dir
+# Hashed assets — cache forever, hash busts on change
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML — never cache (SPA, always serve fresh)
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
