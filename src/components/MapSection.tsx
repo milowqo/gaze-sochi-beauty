@@ -1,6 +1,8 @@
-import { MapPin, Phone, Clock, Navigation } from "lucide-react";
+import { useState } from "react";
+import { MapPin, Phone, Clock, Navigation, Eye } from "lucide-react";
 
 export function MapSection() {
+  const [mapLoaded, setMapLoaded] = useState(false);
   return (
     <section id="location" className="py-16 sm:py-24 md:py-32 px-4 sm:px-8 bg-background">
       <div className="container mx-auto max-w-6xl">
@@ -47,16 +49,27 @@ export function MapSection() {
             </div>
           </div>
 
-          {/* Yandex Map */}
-          <div className="md:col-span-3 rounded-2xl overflow-hidden shadow-lg" style={{ height: "400px" }}>
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?ll=39.728946%2C43.577578&z=17&l=map&pt=39.728946%2C43.577578%2Cpm2rdm"
-              width="100%"
-              height="100%"
-              title="GAZE студия бровей на карте Сочи"
-              loading="lazy"
-              allowFullScreen
-            />
+          {/* Yandex Map — lazy load on click (prevents 3rd-party cookies) */}
+          <div className="md:col-span-3 rounded-2xl overflow-hidden shadow-lg relative" style={{ height: "400px" }}>
+            {mapLoaded ? (
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=39.728946%2C43.577578&z=17&l=map&pt=39.728946%2C43.577578%2Cpm2rdm"
+                width="100%"
+                height="100%"
+                title="GAZE студия бровей на карте Сочи"
+                loading="lazy"
+                allowFullScreen
+              />
+            ) : (
+              <div
+                className="absolute inset-0 flex flex-col items-center justify-center bg-card cursor-pointer hover:bg-muted transition-colors group"
+                onClick={() => setMapLoaded(true)}
+              >
+                <MapPin className="w-10 h-10 text-primary mb-3 opacity-60 group-hover:opacity-100 transition-opacity" />
+                <p className="text-muted-foreground text-sm mb-1">Нажмите, чтобы загрузить карту</p>
+                <p className="text-muted-foreground text-xs opacity-60">Сторонние cookie будут установлены Яндексом</p>
+              </div>
+            )}
           </div>
           <div className="md:col-span-5 flex flex-wrap justify-center gap-4 mt-6">
             <a
