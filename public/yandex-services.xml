@@ -2,7 +2,7 @@
 <yml_catalog date="2026-06-27 22:30">
   <shop>
     <name>GAZE</name>
-    <company>ИП Гусейнова Мария — студия бровей GAZE</company>
+    <company>GAZE — студия бровей</company>
     <url>https://gaze-beauty.ru/</url>
     <currencies>
       <currency id="RUR" rate="1"/>
@@ -51,14 +51,14 @@
     </sets>
     <offers>
       <offer id="service-brow-correction">
-        <name>Коррекция бровей | GAZE | ИП Гусейнова Мария</name>
+        <name>Коррекция бровей | GAZE</name>
         <url>https://gaze-beauty.ru/#service-brow-correction</url>
         <price>1000</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
         <set-ids>brow-correction</set-ids>
         <picture>https://gaze-beauty.ru/preview.jpg</picture>
-        <description>Коррекция формы бровей без окрашивания в студии GAZE ИП Гусейнова Мария в Сочи. Адрес: ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж.</description>
+        <description>Коррекция формы бровей без окрашивания в студии GAZE в Сочи. Адрес: ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
         <param name="График">Ежедневно 10:00-21:00</param>
@@ -69,14 +69,14 @@
         <param name="Конверсия">0</param>
       </offer>
       <offer id="service-brow-correction-color">
-        <name>Коррекция и окрашивание бровей | GAZE | ИП Гусейнова Мария</name>
+        <name>Коррекция и окрашивание бровей | GAZE</name>
         <url>https://gaze-beauty.ru/#service-brow-correction-color</url>
         <price>1800</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
         <set-ids>brow-correction-color</set-ids>
         <picture>https://gaze-beauty.ru/preview.jpg</picture>
-        <description>Коррекция формы и окрашивание бровей краской или хной в студии GAZE ИП Гусейнова Мария в Сочи.</description>
+        <description>Коррекция формы и окрашивание бровей краской или хной в студии GAZE в Сочи.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
         <param name="График">Ежедневно 10:00-21:00</param>
@@ -87,14 +87,14 @@
         <param name="Конверсия">0</param>
       </offer>
       <offer id="service-brow-complex">
-        <name>Коррекция, окрашивание и ламинирование бровей | GAZE | ИП Гусейнова Мария</name>
+        <name>Коррекция, окрашивание и ламинирование бровей | GAZE</name>
         <url>https://gaze-beauty.ru/#service-brow-complex</url>
         <price>2300</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
         <set-ids>brow-complex</set-ids>
         <picture>https://gaze-beauty.ru/preview.jpg</picture>
-        <description>Комплексная услуга: коррекция, окрашивание и ламинирование бровей в студии GAZE ИП Гусейнова Мария в Сочи.</description>
+        <description>Комплексная услуга: коррекция, окрашивание и ламинирование бровей в студии GAZE в Сочи.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
         <param name="График">Ежедневно 10:00-21:00</param>
@@ -105,14 +105,14 @@
         <param name="Конверсия">0</param>
       </offer>
       <offer id="service-brow-correction-lamination">
-        <name>Коррекция и ламинирование бровей | GAZE | ИП Гусейнова Мария</name>
+        <name>Коррекция и ламинирование бровей | GAZE</name>
         <url>https://gaze-beauty.ru/#service-brow-correction-lamination</url>
         <price>1800</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
         <set-ids>brow-correction-lamination</set-ids>
         <picture>https://gaze-beauty.ru/preview.jpg</picture>
-        <description>Коррекция формы и ламинирование бровей с уходом в студии GAZE ИП Гусейнова Мария в Сочи.</description>
+        <description>Коррекция формы и ламинирование бровей с уходом в студии GAZE в Сочи.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
         <param name="График">Ежедневно 10:00-21:00</param>
@@ -123,7 +123,7 @@
         <param name="Конверсия">0</param>
       </offer>
       <offer id="service-brow-correction-lightening">
-        <name>Коррекция и осветление бровей | GAZE | ИП Гусейнова Мария</name>
+        <name>Коррекция и осветление бровей | GAZE</name>
         <url>https://gaze-beauty.ru/#service-brow-correction-lightening</url>
         <price>1800</price>
         <currencyId>RUR</currencyId>
@@ -141,14 +141,14 @@
         <param name="Конверсия">0</param>
       </offer>
       <offer id="service-brow-color">
-        <name>Окрашивание бровей | GAZE | ИП Гусейнова Мария</name>
+        <name>Окрашивание бровей | GAZE</name>
         <url>https://gaze-beauty.ru/#service-brow-color</url>
         <price>1000</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
         <set-ids>brow-color</set-ids>
         <picture>https://gaze-beauty.ru/preview.jpg</picture>
-        <description>Окрашивание бровей краской или хной в студии GAZE ИП Гусейнова Мария в Сочи.</description>
+        <description>Окрашивание бровей краской или хной в студии GAZE в Сочи.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
         <param name="График">Ежедневно 10:00-21:00</param>
@@ -159,14 +159,14 @@
         <param name="Конверсия">0</param>
       </offer>
       <offer id="service-brow-lamination">
-        <name>Ламинирование бровей | GAZE | ИП Гусейнова Мария</name>
+        <name>Ламинирование бровей | GAZE</name>
         <url>https://gaze-beauty.ru/#service-brow-lamination</url>
         <price>1000</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
         <set-ids>brow-lamination</set-ids>
         <picture>https://gaze-beauty.ru/preview.jpg</picture>
-        <description>Ламинирование бровей с уходом в студии GAZE ИП Гусейнова Мария в Сочи.</description>
+        <description>Ламинирование бровей с уходом в студии GAZE в Сочи.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
         <param name="График">Ежедневно 10:00-21:00</param>
@@ -177,14 +177,14 @@
         <param name="Конверсия">0</param>
       </offer>
       <offer id="service-brow-lightening">
-        <name>Осветление бровей | GAZE | ИП Гусейнова Мария</name>
+        <name>Осветление бровей | GAZE</name>
         <url>https://gaze-beauty.ru/#service-brow-lightening</url>
         <price>1000</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
         <set-ids>brow-lightening</set-ids>
         <picture>https://gaze-beauty.ru/preview.jpg</picture>
-        <description>Осветление бровей с уходом в студии GAZE ИП Гусейнова Мария в Сочи.</description>
+        <description>Осветление бровей с уходом в студии GAZE в Сочи.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
         <param name="График">Ежедневно 10:00-21:00</param>
@@ -195,14 +195,14 @@
         <param name="Конверсия">0</param>
       </offer>
       <offer id="service-face-depilation">
-        <name>Депиляция зон на лице | GAZE | ИП Гусейнова Мария</name>
+        <name>Депиляция зон на лице | GAZE</name>
         <url>https://gaze-beauty.ru/#service-face-depilation</url>
         <price>100</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
         <set-ids>face-depilation</set-ids>
         <picture>https://gaze-beauty.ru/preview.jpg</picture>
-        <description>Депиляция зон на лице в студии GAZE ИП Гусейнова Мария в Сочи. Итоговая стоимость зависит от зоны.</description>
+        <description>Депиляция зон на лице в студии GAZE в Сочи. Итоговая стоимость зависит от зоны.</description>
         <param name="Регион">Сочи</param>
         <param name="Адрес">ТЦ Сочи-Магнолия, Курортный проспект, 50, 3 этаж</param>
         <param name="График">Ежедневно 10:00-21:00</param>
