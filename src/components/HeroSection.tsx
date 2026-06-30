@@ -1,5 +1,7 @@
 import heroNewJpg from "@/assets/hero-new.jpg";
 import heroNewWebp from "@/assets/hero-new.webp";
+import heroNewMobileWebp from "@/assets/hero-new-mobile.webp";
+import heroNewMobileJpg from "@/assets/hero-new-mobile.jpg";
 import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
@@ -12,7 +14,8 @@ export function HeroSection({ onBook, onScrollTo }: HeroSectionProps) {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <picture>
-          <source srcSet={heroNewWebp} type="image/webp" />
+          <source srcSet={`${heroNewMobileWebp} 992w, ${heroNewWebp} 1920w`} sizes="100vw" type="image/webp" />
+          <source srcSet={`${heroNewMobileJpg} 992w, ${heroNewJpg} 1920w`} sizes="100vw" type="image/jpeg" />
           <img
             src={heroNewJpg}
             alt="Студия бровей GAZE в Сочи — коррекция, окрашивание и ламинирование бровей"
@@ -21,6 +24,7 @@ export function HeroSection({ onBook, onScrollTo }: HeroSectionProps) {
             className="w-full h-full object-cover object-[65%_20%] sm:object-[60%_25%] md:object-[center_30%]"
             loading="eager"
             decoding="async"
+            fetchpriority="high"
           />
         </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
